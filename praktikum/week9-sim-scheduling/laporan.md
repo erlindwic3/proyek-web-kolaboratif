@@ -1,15 +1,22 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 9
 Topik: Simulasi Algoritma Penjadwalan CPU
 =======
 # Laporan Praktikum Minggu [9]
 Topik: ["Simulasi Algoritma Penjadwalan CPU"]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+# Laporan Praktikum Minggu [9]
+Topik: Simulasi Algoritma Penjadwalan CPU
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani  
 - **NIM**   : 250202915  
@@ -19,10 +26,16 @@ Topik: ["Simulasi Algoritma Penjadwalan CPU"]
 - **NIM**   : [250202947]  
 - **Kelas** : [1IKRB]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- **Nama**  : Ani Ngismatul Hawa
+- **NIM**   : 250202914
+- **Kelas** : 1IKRB
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Tujuan
+<<<<<<< HEAD
 <<<<<<< HEAD
 > Membuat program simulasi algoritma penjadwalan FCFS dan/atau SJF.  
 
@@ -40,25 +53,74 @@ Tuliskan tujuan praktikum minggu ini.
 4. Menjelaskan hasil simulasi secara tertulis.
 5. Mengunggah kode dan laporan ke Git repository dengan rapi dan tepat waktu.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+> - Membuat program simulasi algoritma penjadwalan FCFS dan/atau SJF.
+> - Menjalankan program dengan dataset uji yang diberikan atau dibuat sendiri.
+> - Menyajikan output simulasi dalam bentuk tabel atau grafik.
+> - Menjelaskan hasil simulasi secara tertulis.
+> - Mengunggah kode dan laporan ke Git repository dengan rapi dan tepat waktu.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 
 ## Dasar Teori
+<<<<<<< HEAD
 <<<<<<< HEAD
 Simulasi CPU scheduling merupakan metode untuk memodelkan proses penjadwalan CPU dalam sistem operasi menggunakan program komputer. Simulasi ini bertujuan untuk membantu memahami bagaimana sistem operasi mengatur penggunaan CPU oleh berbagai proses serta mempermudah analisis kinerja penjadwalan melalui perhitungan waktu eksekusi proses.
 
 Algoritma First Come First Served (FCFS) adalah salah satu algoritma penjadwalan CPU yang paling sederhana. Pada algoritma ini, proses akan dieksekusi berdasarkan urutan kedatangan ke dalam sistem. Proses yang datang lebih awal akan memperoleh jatah CPU terlebih dahulu dan dijalankan hingga selesai tanpa adanya interupsi.
 
 Dalam simulasi CPU scheduling FCFS, parameter yang digunakan meliputi arrival time dan burst time. Berdasarkan parameter tersebut, sistem menghitung waiting time dan turnaround time untuk setiap proses. Simulasi ini mudah diimplementasikan dan sesuai untuk pembelajaran, namun memiliki keterbatasan seperti kemungkinan terjadinya convoy effect dan waktu tunggu rata-rata yang tinggi. 
+=======
+- Penjadwalan CPU adalah mekanisme dalam sistem operasi yang menentukan proses mana yang akan dieksekusi oleh CPU dan kapan proses tersebut dijalankan.
+- Simulasi Algoritma Penjadwalan CPU adalah proses pemodelan dan pengujian berbagai algoritma penjadwalan dengan menggunakan data proses (seperti waktu kedatangan dan waktu eksekusi) untuk menganilisis kinerja algoritma tanpa harus menerapkannya langsung pada sistem nyata.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Langkah Praktikum
+<<<<<<< HEAD
 1. **Menyiapkan Dataset**
 =======
 1. Konsep Dasar Penjadwalan CPU: Merupakan mekanisme utama dalam sistem operasi multiprogramming untuk memaksimalkan utilitas CPU. Tujuannya adalah memastikan CPU selalu sibuk dengan cara beralih di antara berbagai proses yang berada dalam antrean (ready queue).
 2. Kriteria Penjadwalan: Digunakan sebagai parameter untuk mengukur efisiensi algoritma. Kriteria utama meliputi Waiting Time (total waktu tunggu proses di ready queue), Turnaround Time (waktu total dari saat proses masuk hingga selesai), dan Response Time (waktu sejak permintaan masuk hingga respons pertama diberikan).
 3. Gantt Chart sebagai Alat Simulasi: Dalam percobaan, Gantt Chart digunakan untuk memvisualisasikan urutan eksekusi proses secara kronologis. Diagram ini memudahkan penghitungan statistik performa algoritma seperti rata-rata waktu tunggu (Average Waiting Time).
 ---
+=======
+1. Menyiapkan Dataset
+
+Buat dataset proses minimal berisi:
+
+|Proses|	Arrival Time|	Burst Time|
+|------|------------|------------|
+|P1	|0|	6|
+|P2	|1|	8|
+|P3	|2|	7|
+|P4	|3|	3|
+2. Implementasi Algoritma
+
+Program harus:
+
+- Menghitung waiting time dan turnaround time.
+- Mendukung minimal 1 algoritma (FCFS atau SJF non-preemptive).
+- Menampilkan hasil dalam tabel.
+- Eksekusi & Validasi
+
+- Jalankan program menggunakan dataset uji.
+- Pastikan hasil sesuai dengan perhitungan manual minggu sebelumnya.
+- Simpan hasil eksekusi (screenshot).
+3. Analisis
+
+- Jelaskan alur program.
+- Bandingkan hasil simulasi dengan perhitungan manual.
+- Jelaskan kelebihan dan keterbatasan simulasi.
+
+5. Output yang Diharapkan
+- Kode program simulasi di folder code/.
+- Dataset uji di code/dataset.csv.
+- Screenshot hasil eksekusi di screenshots/.
+- Laporan lengkap di laporan.md.
+- Semua hasil telah di-commit ke GitHub.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ## Langkah Praktikum
 1. Menyiapkan Dataset Buat dataset proses minimal berisi data yang telah disajikan.
@@ -116,6 +178,7 @@ git push origin main
 
 ## Kode / Perintah
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Kode program simulasi di folder `code/`.
 - Dataset uji di `code/reference_string.txt`.
 - Screenshot hasil simulasi di `screenshots/`.
@@ -124,6 +187,12 @@ git push origin main
 Tuliskan potongan kode atau perintah utama:
 ```bash
 praktikum/week9-sim-scheduling/
+=======
+
+- Struktur folder
+
+```praktikum/week9-sim-scheduling/
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ├─ code/
 │  ├─ scheduling_simulation.*
 │  └─ dataset.csv
@@ -131,7 +200,17 @@ praktikum/week9-sim-scheduling/
 │  └─ hasil_simulasi.png
 └─ laporan.md
 ```
+<<<<<<< HEAD
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- Push Github
+
+> git add .
+
+> git commit -m "Minggu 9 - Simulasi Scheduling CPU"
+
+> git push origin main
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
@@ -140,12 +219,17 @@ praktikum/week9-sim-scheduling/
 ![Screenshot](screenshots/Screenshot%202025-12-26%20121827.png)
 =======
 Sertakan screenshot hasil percobaan atau diagram:
+<<<<<<< HEAD
 ![Screenshots hasil](./screenshots/Hasil%20eksekusi.png)
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
+![Screenshot hasil](./screenshots/Hasil%20Eksekusi.png)
 ---
 
 ## Analisis
+<<<<<<< HEAD
 <<<<<<< HEAD
 Berdasarkan hasil percobaan algoritma *First Come First Served (FCFS)*, proses dieksekusi sesuai urutan waktu kedatangan sehingga proses yang datang lebih awal akan diproses terlebih dahulu tanpa memperhatikan lama waktu eksekusinya. Akibatnya, proses dengan *burst time* besar dapat menyebabkan proses lain menunggu lebih lama, sehingga nilai *waiting time* dan *turnaround time* meningkat pada proses yang datang belakangan. Hal ini menunjukkan bahwa meskipun FCFS mudah diimplementasikan, algoritma ini kurang efisien untuk sistem dengan variasi waktu proses yang besar karena dapat menimbulkan efek *convoy*.
 =======
@@ -160,10 +244,24 @@ Arsitektur OS (Context Switching): Meskipun simulasi ini terlihat sederhana, dal
 3. Path File: Windows menggunakan backslash (contoh: C:\Users\ASUS), sedangkan Linux menggunakan forward slash (contoh: /home/user).Manajemen Memori: Linux umumnya lebih efisien dalam membuat proses baru (process forking) dibandingkan Windows yang memiliki overhead lebih besar.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
+=======
+Analisis Singkat Hasil Eksekusi FCFS
+
+- Algoritma yang digunakan adalah FCFS (First Come First Serve) → proses dieksekusi sesuai urutan kedatangan: P1 → P2 → P3 → P4.
+
+- P1 benar: datang paling awal, waiting time = 0, turnaround = 6.
+
+- P2 dan P3: waiting time ditampilkan 0, seharusnya tidak 0 karena mereka menunggu proses sebelumnya selesai → ada kesalahan perhitungan waiting time.
+
+- P4: waiting time dan turnaround sudah sesuai konsep FCFS.
+
+Muncul SyntaxWarning invalid escape sequence '\t', karena penulisan string \t tidak aman.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kesimpulan
+<<<<<<< HEAD
 <<<<<<< HEAD
 Berdasarkan hasil praktikum simulasi CPU scheduling menggunakan algoritma First Come First Served (FCFS), dapat disimpulkan bahwa simulasi berhasil menggambarkan cara kerja penjadwalan CPU berdasarkan urutan kedatangan proses. Hasil perhitungan waiting time dan turnaround time yang diperoleh dari simulasi sesuai dengan perhitungan manual, sehingga implementasi algoritma dapat dinyatakan benar. Algoritma FCFS mudah diimplementasikan dan cocok untuk pembelajaran konsep dasar penjadwalan CPU, namun memiliki keterbatasan seperti waktu tunggu rata-rata yang tinggi dan potensi terjadinya convoy effect.
 =======
@@ -173,10 +271,16 @@ Berdasarkan hasil praktikum simulasi CPU scheduling menggunakan algoritma First 
 
 3. Pengaruh Lingkungan OS: Terdapat perbedaan teknis yang terlihat dari penggunaan Windows (seperti pada gambar) yang menggunakan backslash (\) dalam jalur file dan manajemen process creation yang lebih berat, dibandingkan dengan Linux yang menggunakan forward slash (/) dan mekanisme forking yang lebih ringan untuk menangani proses serupa.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- Algoritma penjadwalan CPU berfungsi untuk mengatur urutan proses agar CPU bekerja lebih efisien. 
+- Melalui simulasi, kita bisa melihat perbedaan waktu tunggu dan waktu penyelesaian setiap proses tergantung algoritma yang digunakan. 
+- Setiap algoritma punya kelebihan dan kekurangan, sehingga pemilihan algoritma sangat memengaruhi kinerja sistem.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Quiz
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Mengapa simulasi diperlukan untuk menguji algoritma scheduling?
    **Jawaban:** Simulasi diperlukan untuk memodelkan cara kerja algoritma scheduling secara nyata tanpa harus menjalankannya pada sistem operasi sebenarnya. Melalui simulasi, proses perhitungan waktu eksekusi, waiting time, dan turnaround time dapat diuji secara otomatis sehingga mengurangi kesalahan perhitungan manual serta mempermudah analisis kinerja algoritma.
@@ -192,11 +296,31 @@ Berdasarkan hasil praktikum simulasi CPU scheduling menggunakan algoritma First 
 3. [Algoritma mana yang lebih mudah diimplementasikan? Jelaskan.]  
    **Jawaban:Algoritma yang paling mudah diimplementasikan adalah First-Come, First-Served (FCFS) karena logikanya hanya menggunakan prinsip antrean sederhana atau FIFO (First-In, First-Out). Dalam implementasi kodenya, pengembang tidak perlu membuat fungsi pengurutan ulang yang rumit seperti pada Shortest Job First (SJF) atau mengatur interupsi kuantum waktu seperti pada Round Robin, melainkan cukup mengeksekusi proses berdasarkan urutan kedatangannya saja. Algoritma ini juga memiliki beban sistem (overhead) yang sangat rendah karena tidak memerlukan prediksi waktu pengerjaan di masa depan, sehingga struktur datanya sangat ringkas dan mudah dipahami bagi pemula dalam pemrograman sistem operasi.**  
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Mengapa simulasi diperlukan untuk menguji algoritma scheduling? 
+
+   **Jawaban:** 
+
+Simulasi diperlukan supaya kita bisa menguji dan membandingkan algoritma schedulling dengan aman dan terkontrol, tanpa harus langsung menerpkannya di sistem nyata.
+
+2. Apa perbedaan hasil simulasi dengan perhitungan manual jika dataset besar?
+
+   **Jawaban:**  
+- Perhitungan manual: Rentan salah hitung, memakan waktu lama, dan sulit dilacak kalau prosesnya banyak.
+- Simulasi (program): Lebih cepat, akurat, dan kosisten meskipun datanya sangat besar. 
+
+3. Algoritma mana yang lebih mudah diimplementasikan? Jelaskan.
+
+   **Jawaban:**  
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
+
+Algoritma yang paling mudah diimplementasikan adalah FCFS (First Come First Serve). FCFS sederhana karena proses dijalankan sesuai urutan kedatangan. Tidsk perlu perhitungan rumit atau pengurutan berdasarkan burst time, cukup pakai antrian. Karena itu, FCFS paling mudah dipahami dan dibuat kodenya, terutama untuk pemula.
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Apa bagian yang paling menantang minggu ini?  kurang semangat dalam mengerjakan tugas.
 - Bagaimana cara Anda mengatasinya?  butuh penyemangat.
@@ -205,6 +329,12 @@ Tuliskan secara singkat:
 - Bagaimana cara Anda mengatasinya?  
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
+=======
+- Apa bagian yang paling menantang minggu ini? 
+menentukan code dalam pyhton agar tidak error saat dicoba
+- Bagaimana cara Anda mengatasinya?  
+membenarkan dan meneliti dengan jelas 
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ---
 
 **Credit:**  

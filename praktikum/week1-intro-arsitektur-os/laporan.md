@@ -1,15 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 1
 Topik: Arsitektur Sistem Operasi dan Kernel
 =======
 # Laporan Praktikum Minggu [X]
 Topik:  "Arsitektur Sistem Operasi dan Kernel"
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+# Laporan Praktikum Minggu [1]
+Topik: [Analisis arsitektur kernel dan model sistem operasi]
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani 
 - **NIM**   : 250202915 
@@ -19,6 +25,11 @@ Topik:  "Arsitektur Sistem Operasi dan Kernel"
 - **NIM**   : [250202947]  
 - **Kelas** : [1IKRB]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- **Nama**  : [Ani Ngismatul Hawa]  
+- **NIM**   : [250202914]  
+- **Kelas** : [1IKRB ]
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
@@ -31,12 +42,20 @@ Topik:  "Arsitektur Sistem Operasi dan Kernel"
 =======
 Tuliskan tujuan praktikum minggu ini.  
 Contoh:  
+<<<<<<< HEAD
 > Mahasiswa mampu membuat visual code,gitbash.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+> Mahasiswa mampu memahami cara kerja kernel dan sisem operasi, meningkatkan modularitas.
+> Membandingkan model arsitektur OS
+> Mengidentifikasi komponen utama OS
+> Menggambarkan diagram sederhana arsitektur OS menggunakan alat bantu
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Dasar Teori
+<<<<<<< HEAD
 <<<<<<< HEAD
 Operating System Architecture 
  Operating system architecture merupakan struktur desain yang menentukan bagaimana sistem operasi dibangun dan bagian-bagiannya saling berkomunikasi untuk mengelola seluruh aktivitas komputer.
@@ -54,10 +73,16 @@ Operating System Architecture
 Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 Sistem operasi adalah perangkat lunak dasar yang mengelola semua sumber daya perangkat keras dan lunak komputer serta menjadi perantara antara pengguna dan perangkat keras.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+ Monolithic kernel : semua layanan inti sistem operasi dijalankan dalam kernel space  yang sama
+ Micro kernel      : yang dijalankan hanya fungsi-fungsi paling esensial di ruang kernel,seperti manajemen proses dan komuinikasi antar proses.
+ Layered           : disusun dalam lapisan-lapisan terpisah yang memiliki fungsi berbeda, seperti lapisan presentasi, dsb.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Langkah Praktikum
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Membaca materi pengantar tentang komponen OS.  
 2. Perintah yang dijalankan.
@@ -138,13 +163,31 @@ git commit -m "Minggu 1 - Arsitektur Sistem Operasi dan Kernel"
 git push origin main
 ```
 ```bash
+=======
+1. Membaca dan memahami materi bagaimana cara bekerja OS atau Sistem operasi dengan rinci dan jelas.  
+2. Perintah yang dijalankan.
+ ```bash
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 uname -a
 whoami
 lsmod | head
 dmesg | head
 ```
 
+3. Membuat diagram arsitektur menggunakan ala bantu (Draw.io).  
+5. Commit message yang digunakan
+ Hasil Laporan
+```praktikum/week1-intro-arsitektur-os/laporan.md```
+Hasil Diagram
+```praktikum/week1-intro-arsitektur-os/screenshoots/diagram-os.png```
 ---
+
+## Kode / Perintah
+Tuliskan potongan kode atau perintah utama:
+```git add.
+git commit-m "Minggu 1"
+git push origin main
+```
 
 ## Hasil Eksekusi
 <<<<<<< HEAD
@@ -152,12 +195,17 @@ Screenshot hasil percobaan atau diagram:
 ![Tugas Diagram](TugasDiagram.PNG)
 =======
 Sertakan screenshot hasil percobaan atau diagram:
+<<<<<<< HEAD
 ![Screenshot hasil](./screenshots/Screenshot%202025-10-11%20210447.png)
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+![schreenshots/.](screenshots/example.png)
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Analisis
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Makna dari percobaan atau membuat diagram tersebut adalah untuk mengetahui hubungan antara _User → System Call → Kernel → Hardware_ 
 - Hubungan antara Kernel, system Call, dan Arsitektur OS, yaitu:
@@ -193,10 +241,21 @@ Hasil dapat dihubungkan dengan fungsi kernel sebagai inti sistem operasi yang me
 =======
 Monolithic kernel adalah arsitektur sistem operasi di mana semua layanan inti OS, seperti manajemen memori, penjadwalan proses, dan manajemen perangkat keras, berjalan dalam satu ruang alamat (satu program besar)bagian dapat menyebabkan crash seluruh.Mikrokernel adalah jenis kernel sistem operasi yang hanya berisi fungsionalitas inti minimal, seperti manajemen memori dan komunikasi antarproses (IPC), sementara layanan lainnya (seperti driver perangkat dan sistem berkas) berjalan di ruang pengguna Arsitektur berlapis (layered architecture) adalah pola desain perangkat lunak yang membagi aplikasi menjadi beberapa lapisan terpisah, di mana setiap lapisan memiliki tanggung jawab tertentu dan hanya berinteraksi dengan lapisan di bawahnya. sebagai server terpisah.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- makna hasil percobaan antara lain menganalisis kelebihan dan kekurangan setiap os, mengidentifikasi suatu masalah pada os  .  
+- arsitektur os adalah struktur dasar,kernel adalah inti yang menghubungkan software dan hardware, sistem call adalah suatu mekanisme yang dapat digunakan aplikasi untuk meminta layanan dari kernel, dan sementara itu aplikasi tidak dapat langsung mengakses hardware ataupun sebaliknya .  
+- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)? linux lebih efisiens tetapi windows mempermudah hardware melalui sistem komersialnya  
+
+---
+
+## kesimpulan yang saya ambil adalah
+perbedaan sistem operasi seperti kernel, sistem call dan arsitektur os sangat berbeda satu sama lain,selain itu saya  jadi tahu bagaimana cara bekerja sistem operasi, dan mengetahui sisi linux aaupun windows, saya lebih mudah mengidentifikasi software bagaimana dan juga hardware .
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Quiz
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Sebutkan tiga fungsi utama sistem operasi.
 2. 
@@ -218,12 +277,21 @@ Monolithic kernel adalah arsitektur sistem operasi di mana semua layanan inti OS
 3. [Sebutkan contoh OS dengan arsitektur monolithic dan microkernel]  
    **Jawaban:**  
    Contoh OS arsitektur monolitik antara lain adalah Linux dan varian Unix tradisional (seperti BSD), sementara contoh OS dengan arsitektur mikrokernel (monokernel) adalah GNU Hurd
+=======
+1. [jelaskan fungsi utama sistem operasi]  
+   **Jawaban: memanajemen proses,menjadi perantara antara software dan hardware,menjalankan dan mengatur aplikasi.**  
+2. [jelaskan perbedaan antara kernel mode dan user mode]  
+   **Jawaban: user mode bisa menyentuh os tetapi hanya bisa menjalankan aplikasi yang terlihat dengan terbatas sedangkan kernel mode mempunyai hak penuh atas os yang tak terlihat oleh user maupun yang terlihat oleh user,dan mempunyai hak istimewa terhadap hardware**  
+3. [sebutkan contoh OS dengan arsitektur monolithic dan microcernel]  
+   **Jawaban:monolithic antara lain, Linux, dan Windows, sedangkan Mikrokernel, QNX, dan minix**  
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Apa bagian yang paling menantang minggu ini?
 
@@ -237,6 +305,10 @@ semua menantang leptop rusak
 - Bagaimana cara Anda mengatasinya?  
 bersabar
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- Apa bagian yang paling menantang minggu ini? cara pengerjaan dengan membuat code,kesalahan update didashboard github,membaca referensi dari beberapa sumber 
+- Bagaimana cara Anda mengatasinya? melihat tutorial diaplikasi yt, mengulang kembali tugas (revisi), memilih 1 buku yang mengacu pada materi kali ini.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 

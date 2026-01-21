@@ -1,15 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 13
 Topik: Docker – Resource Limit (CPU & Memori)
 =======
 # Laporan Praktikum Minggu [13]
 Topik: ["Docker – Resource Limit (CPU & Memori)"]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+# Laporan Praktikum Minggu [13]
+Topik: Docker – Resource Limit (CPU & Memori)
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani
 - **NIM**   : 250202915 
@@ -31,20 +37,38 @@ Topik: ["Docker – Resource Limit (CPU & Memori)"]
 - **Nama**  : [Lutfi Khoerunnisa]  
 - **NIM**   : [250202947]  
 - **Kelas** : [250202947]
+=======
+- **Nama**  : Ani Ngismatul Hawa 
+- **NIM**   : 250202914
+- **Kelas** : 1IKRB
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Tujuan
+<<<<<<< HEAD
 1. Menulis Dockerfile sederhana untuk sebuah aplikasi/skrip.
 2. Membangun image dan menjalankan container.
 3. Menjalankan container dengan pembatasan CPU dan memori.
 4. Mengamati dan menjelaskan perbedaan eksekusi container dengan dan tanpa limit resource.
 5. Menyusun laporan praktikum secara runtut dan sistematis.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+> Menulis Dockerfile sederhana untuk sebuah aplikasi/skrip.
+
+>Membangun image dan menjalankan container.
+
+>Menjalankan container dengan pembatasan CPU dan memori.
+
+>Mengamati dan menjelaskan perbedaan eksekusi container dengan dan tanpa limit resource.
+
+>Menyusun laporan praktikum secara runtut dan sistematis.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Dasar Teori
+<<<<<<< HEAD
 <<<<<<< HEAD
 Container adalah unit standar software yang mengemas kode dan semua dependensinya sehingga aplikasi dapat berjalan dengan cepat dan handal dari satu computing environment ke environmeny lainnya.
 
@@ -55,12 +79,63 @@ Docker menggunakan cgroups(control groups) dari linux kernel untuk membatasi,men
 - Manajemen Kuota CPU: Docker mengatur waktu akses prosesor dengan menentukan berapa banyak siklus CPU yang boleh digunakan oleh sebuah kontainer, sehingga distribusi daya komputasi tetap adil dan mencegah terjadinya kelebihan beban (overload) pada perangkat keras.
 
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Docker dan Containerization: platform yang digunakan untuk menjalankan aplikasi dalam bentuk container
+2. Resource Management pada Sistem Operasi: mengatur penggunaan sumber daya seperti CPU dan memori agar setiap proses berjalan secara adil dan tidak saling mengganggu.
+3. Control Groups (cgroups): Cgroups adalah fitur kernel Linux yang memungkinkan pembatasan, pemantauan, dan pengelompokan penggunaan resource oleh suatu proses.
+4. Pembatasan CPU pada Docker: Bertujuan untuk mengatur porsi waktu CPU yang dapat digunakan oleh container.
+5. Pembatasan Memori pada Docker: Pembatasan memori digunakan untuk mengontrol jumlah RAM maksimum yang boleh digunakan container.
+6. Dampak Resource Limit terhadap Aplikasi: Penerapan resource limit memberikan dampak langsung pada performa aplikasi
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Langkah Praktikum
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. **Persiapan Lingkungan**
+=======
+1. Persiapan Lingkungan
+
+- Pastikan Docker terpasang dan berjalan.
+- Verifikasi:
+```docker version```
+```docker ps```
+2. Membuat Aplikasi/Skrip Uji
+
+Buat program sederhana di folder code/ (bahasa bebas) yang:
+
+- Melakukan komputasi berulang (untuk mengamati limit CPU), dan/atau
+- Mengalokasikan memori bertahap (untuk mengamati limit memori).
+3. Membuat Dockerfile
+
+- Tulis Dockerfile untuk menjalankan program uji.
+- Build image:
+```docker build -t week13-resource-limit .```
+4. Menjalankan Container Tanpa Limit
+
+- Jalankan container normal:
+```docker run --rm week13-resource-limit```
+- Catat output/hasil pengamatan.
+5. Menjalankan Container Dengan Limit Resource
+
+- Jalankan container dengan batasan resource (contoh):
+
+```docker run --rm --cpus="0.5" --memory="256m" week13-resource-limit```
+- Catat perubahan perilaku program (mis. lebih lambat, error saat memori tidak cukup, dll.).
+
+6. Monitoring Sederhana
+
+- Jalankan container (tanpa --rm jika perlu) dan amati penggunaan resource:
+```docker stats```
+- Ambil screenshot output eksekusi dan/atau docker stats.
+7. Commit & Push
+
+```git add .```
+```git commit -m "Minggu 13 - Docker Resource Limit"```
+```git push origin main```
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
    - Pastikan Docker terpasang dan berjalan.
    - Verifikasi:
@@ -162,6 +237,7 @@ Catat perubahan perilaku program (mis. lebih lambat, error saat memori tidak cuk
 
 ## Kode / Perintah
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```
 docker version
 docker ps
@@ -232,10 +308,43 @@ Pengujian menunjukkan bahwa container yang dijalankan tanpa batasan resource dap
 =======
 Analisis hasil praktikum menunjukkan bahwa penggunaan image Docker berbasis Python 3.11-slim berhasil menciptakan isolasi aplikasi yang efisien. Tanpa pembatasan, kontainer terdeteksi mengonsumsi memori secara terus-menerus hingga 50 MB, yang berisiko menguras sumber daya host. Namun, penerapan Resource Limit (CPU 0.5 dan RAM 256MB) terbukti efektif mengunci penggunaan sumber daya pada batas aman. Hal ini divalidasi oleh data monitoring yang menunjukkan konsumsi CPU hanya 8.00% dan RAM 32.57 MiB, sehingga stabilitas infrastruktur tetap terjaga.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Tuliskan potongan kode atau perintah utama:
+```docker version ```
+
+```docker ps``` 
+
+```docker build -t week13-resource-limit .```
+
+```docker run --rm --cpus="0.5" --memory="256m" week13-resource-limit```
+
+```docker stats```
+
+---
+
+## Hasil Eksekusi
+Sertakan screenshot hasil percobaan atau diagram:
+
+![Screenshot hasil](./screenshots/docker%20build.png)
+![Screenshot hasil](./screenshots/docker%20run.png)
+![Screenshot hasil](./screenshots/dr2.png)
+![Screenshot hasil](./screenshots/dr3.png)
+![Screenshot hasil](./screenshots/dr4.png)
+![Screenshot hasil](./screenshots/dengan%20limit.png)
+![Screenshot hasil](./screenshots/dl2.png)
+![Screenshot hasil](./screenshots/dl3.png)
+![Screenshot hasil](./screenshots/dl4.png)
+![Screenshot hasil](./screenshots/docker%20status.png)
+---
+
+## Analisis
+Percobaan menunjukkan bahwa pembatasan resource pada Docker sangat mempengaruhi kinerja aplikasi. Tanpa limit, container dapat menggunakan CPU dan memori secara bebas sehingga program berjalan normal. Dengan adanya limit CPU, proses menjadi lebih lambat karena waktu eksekusi dibatasi. Sementara itu, pembatasan memori menyebabkan aplikasi berhenti atau mengalami error saat penggunaan memori melebihi batas. Hal ini membuktikan bahwa Docker resource limit efektif dalam mengontrol penggunaan sumber daya dan menjaga kestabilan sistem. 
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kesimpulan
+<<<<<<< HEAD
 <<<<<<< HEAD
 Dari hasil pengujian dapat disimpulkan bahwa pembatasan resource pada container Docker sangat penting untuk menjaga efisiensi dan stabilitas sistem. Dengan menerapkan limit CPU dan memori, administrator dapat mengontrol penggunaan resource tiap container, mencegah overload, serta memastikan beberapa aplikasi dapat berjalan secara bersamaan tanpa saling mengganggu.
 =======
@@ -245,10 +354,14 @@ Dari hasil pengujian dapat disimpulkan bahwa pembatasan resource pada container 
 
 3. Efektivitas Pengendalian: Penerapan batas CPU 0.5 dan memori 256 MB terbukti efektif menjaga stabilitas sistem, dengan realisasi penggunaan CPU hanya sebesar 8.00% dan memori 32.57 MiB berdasarkan data monitoring.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+Docker resource limit merupakan fitur penting untuk mengatur pemakaian CPU dan memori pada container. Dengan pembatasan ini, aplikasi dapat berjalan lebih terkendali, sistem lebih stabil, dan penggunaan resource menjadi lebih efisien.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Quiz
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Mengapa container perlu dibatasi CPU dan memori? 
    **Jawaban:**  Container perlu dibatasi CPU dan memori agar satu aplikasi tidak menggunakan seluruh resource sistem yang dapat mengganggu aplikasi lain. Pembatasan ini menjaga kestabilan sistem, meningkatkan efisiensi penggunaan resource, serta mencegah terjadinya overload atau crash pada host.
@@ -264,6 +377,27 @@ Dari hasil pengujian dapat disimpulkan bahwa pembatasan resource pada container 
 3. [Apa dampak limit memori terhadap aplikasi yang boros memori?]  
    **Jawaban:**  Dampak utama limit memori terhadap aplikasi yang boros memori adalah terjadinya kondisi Out Of Memory (OOM) Kill. Jika aplikasi terus melakukan alokasi memori hingga melampaui batas yang ditentukan (seperti limit 256MB pada pengujian Anda), sistem Docker akan secara otomatis menghentikan (kill) proses tersebut untuk melindungi stabilitas host. Hal ini berbeda dengan pengujian tanpa limit, di mana aplikasi dapat terus membengkak (mencapai 50 MB dan seterusnya) tanpa hambatan, yang jika dibiarkan pada aplikasi asli yang lebih berat, dapat menyebabkan seluruh server menjadi tidak responsif atau freeze.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Mengapa container perlu dibatasi CPU dan memori? 
+
+   **Jawaban:**  
+   Container perlu dibatasi CPU dan memori agar penggunaan sumber daya sistem tetap terkendali. Pembatasan ini mencegah satu container menggunakan CPU atau memori secara berlebihan yang dapat mengganggu container lain maupun sistem host.
+2. Apa perbedaan VM dan container dalam konteks isolasi resource?
+
+   **Jawaban:**  
+   Perbedaan VM dan container dalam konteks isolasi resource adalah bahwa VM memiliki isolasi penuh karena setiap VM menjalankan sistem operasi sendiri di atas hypervisor, sehingga penggunaan resource lebih terpisah namun lebih berat. Sedangkan container berbagi kernel sistem operasi host, sehingga lebih ringan dan cepat, dengan isolasi resource yang diatur menggunakan mekanisme seperti *cgroups*.
+
+3. Apa dampak limit memori terhadap aplikasi yang boros memori?
+
+   **Jawaban:** 
+   **Dampak limit memori terhadap aplikasi yang boros memori:**
+
+* Aplikasi menjadi lambat karena sering gagal mengalokasikan memori.
+* Aplikasi bisa crash / berhenti sendiri (*out of memory*).
+* Pada container, proses bisa langsung dihentikan (OOMKilled) oleh sistem.
+* Data yang sedang diproses bisa hilang atau tidak selesai.
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 

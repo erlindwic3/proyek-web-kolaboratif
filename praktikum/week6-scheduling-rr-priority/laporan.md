@@ -1,15 +1,22 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 6
 Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling  
 =======
 # Laporan Praktikum Minggu [6]
 Topik: [Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+# Laporan Praktikum Minggu [6]
+Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani 
 - **NIM**   : 250202915  
@@ -19,10 +26,16 @@ Topik: [Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling]
 - **NIM**   : [250202947]  
 - **Kelas** : [1IKRB]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- **Nama**  : Ani Ngismatul Hawa 
+- **NIM**   : 250202914
+- **Kelas** : 1IKRB
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Tujuan
+<<<<<<< HEAD
 <<<<<<< HEAD
 > Menghitung *waiting time* dan *turnaround time* pada algoritma RR dan Priority.
 
@@ -40,10 +53,19 @@ Tuliskan tujuan praktikum minggu ini.
 > Menjelaskan pengaruh time quantum dan prioritas terhadap keadilan eksekusi proses.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 > Menarik kesimpulan mengenai efisiensi dan keadilan kedua algoritma.
+=======
+1. Menghitung waiting time dan turnaround time pada algoritma RR dan Priority.
+2. Menyusun tabel hasil perhitungan dengan benar dan sistematis.
+3. Membandingkan performa algoritma RR dan Priority.
+4. Menjelaskan pengaruh time quantum dan prioritas terhadap keadilan eksekusi proses.
+5. Menarik kesimpulan mengenai efisiensi dan keadilan kedua algoritma.
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Dasar Teori
+<<<<<<< HEAD
 <<<<<<< HEAD
    ***Penjadwalan CPU (CPU Scheduling)*** adalah salah satu fungsi utama dalam sistem operasi yang bertujuan untuk menentukan proses mana yang akan mendapatkan alokasi waktu CPU pada saat tertentu. Karena hanya satu proses yang dapat menggunakan CPU pada suatu waktu, maka sistem operasi perlu mengatur proses-proses yang sedang menunggu agar dapat dieksekusi secara efisien dan adil.
 
@@ -69,6 +91,48 @@ Tuliskan tujuan praktikum minggu ini.
    | P2 | 3 | 1 | 1 |
    | P3 | 8 | 2 | 4 |
    | P4 | 6 | 3 | 3 |
+=======
+- **Penjadwalan CPU** itu seperti sistem antrian tugas di komputer. Saat banyak program ingin dijalankan, CPU tidak bisa mengerjakan semuanya sekaligus, jadi sistem operasi mengatur urutannya.
+penjadwalan CPU menentukan proses mana yang dikerjakan dulu, mana yang menunggu, dan berapa lama setiap proses mendapat giliran. Tujuannya biar komputer tetap cepat, adil, dan tidak ada tugas yang terlalu lama menunggu.
+- **Round Robin** adalah cara penjadwalan CPU yang membagi waktu secara bergiliran dan adil untuk setiap proses.
+Setiap proses diberi jatah waktu singkat yang disebut quantum. Kalau proses belum selesai saat waktunya habis, dia harus antre lagi di belakang barisan dan menunggu giliran berikutnya.
+- **Priority Scheduling** adalah cara penjadwalan CPU yang memilih proses berdasarkan tingkat prioritasnya.
+Artinya, proses yang punya prioritas lebih tinggi akan dijalankan lebih dulu, sedangkan yang prioritasnya rendah harus menunggu.
+---
+
+## Langkah Praktikum
+1. Siapkan Data Proses
+2. Eksperimen 1 Round Robin
+- Gunakan time quantum (q) = 3.
+- Hitung waiting time dan turnaround time untuk tiap proses.
+- Simulasikan eksekusi menggunakan Gantt Chart (manual atau spreadsheet).
+- Catat sisa burst time tiap putaran.
+3. Eksperimen 2 – Priority Scheduling (Non-Preemptive)
+- urutkan proses berdasarkan nilai prioritas (angka kecil = prioritas tinggi).
+- Lakukan perhitungan manual untuk:
+
+`WT[i] = waktu mulai eksekusi - Arrival[i]`
+`TAT[i] = WT[i] + Burst[i]`
+- Buat tabel perbandingan hasil RR dan Priority.
+4. Eksperimen 3 – Analisis Variasi Time Quantum (Opsional)
+
+-  Ubah quantum menjadi 2 dan 5.
+- Amati perubahan nilai rata-rata waiting time dan turnaround time.
+- Buat tabel perbandingan efek quantum.
+5. Eksperimen 4 – Dokumentasi
+
+- Simpan semua hasil tabel dan screenshot ke:
+
+`praktikum/week6-scheduling-rr-priority/screenshots/`
+
+6. Commit & Push
+
+`git add .`
+
+`git commit -m "Minggu 6 - CPU Scheduling RR & Priority"`
+
+`git push origin main`
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 2. **Eksperimen 1 – Round Robin (RR)**
    - Menggunakan *time quantum (q)* = 3.  
@@ -142,6 +206,7 @@ Buat tabel perbandingan hasil RR dan Priority.
 ---
 
 ## Kode / Perintah
+<<<<<<< HEAD
 Tuliskan potongan kode atau perintah utama:
 ```bash
 | P1 | P2 | P3 | P4 | P1 | P3 | ...
@@ -150,6 +215,34 @@ WT[i] = waktu mulai eksekusi - Arrival[i]
 TAT[i] = WT[i] + Burst[i]
 ```
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+
+- Data proses
+
+|Proses|Burst Time|	Arrival Time|	Priority|
+|-----|-------|-----|----|
+|P1|	5|	0|	2|
+|P2|3|	1|	1|
+|P3|	8|	2|	4|
+|P4|	6|	3|	3|
+
+-  Gunakan time quantum (q) = 3.
+-  Gantt Chart
+
+`| P1 | P2 | P3 | P4 | P1 | P3 | ...`
+
+`0    3    6    9   12   15   18  ...`
+
+- Lakukan perhitungan manual untuk:
+
+`WT[i] = waktu mulai eksekusi - Arrival[i]`
+`TAT[i] = WT[i] + Burst[i]`
+
+- Hasil perhitungan dan analisis dimasukkan ke `laporan.md.`
+- Screenshot tabel atau Gantt Chart disimpan di folder `screenshots/.`
+- Laporan lengkap berada di laporan.md.
+- Semua hasil telah di-commit ke GitHub tepat waktu.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
@@ -205,6 +298,7 @@ TAT[i] = WT[i] + Burst[i]
      | Priority | 5,25 | 10,75 | Efisien untuk proses penting | Potensi *starvation* pada prioritas rendah |
 =======
 Sertakan screenshot hasil percobaan atau diagram:
+<<<<<<< HEAD
 ![Screenshot hasil](./screenshots/gabungan.png)
 Eksperimen 1 Round Robin
 ![Screenshot hasil](./screenshots/RB.png)
@@ -218,10 +312,36 @@ Eksperimen 2 Priority Scheduling
 Tabel Perbandingan Round Robin dan Priority Scheduling
 ![Screenshot hasil](./screenshots/Tabel%20perbandingan%20RB%20dan%20PS.png)
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
+![Screenshot hasil](./screenshots/Hasil%206.png)
+1. **Eksperimen 1 Round Robin**
+
+![Screenshot hasil](./screenshots/Round%20Robin.png)
+- Gantt Chart
+
+ | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
+0    3    6    9    12   14   17   20   22 
+
+2. **Eksperimen 2 Priority Scheduling**
+
+![Screenshot hasil](./screenshots/Priority.png)
+- Gantt Chart
+
+ | P1 | P2 | P4 | P3 |
+0    5    8   14   22
+
+3. **Perbandingan antara Round Robin & Priority Scedulling** :
+
+|Algoritma|	Avg Waiting Time|	Avg Turnaround Time|	Kelebihan|	Kekurangan|
+|---------|----------|--------|--------|-------|
+|RR|	8,5	|14|	Adil terhadap semua proses	|Tidak efisien jika quantum tidak tepat|
+|Priority	|5,25|	10,75|	Efisien untuk proses penting|	Potensi starvation pada prioritas rendah|
 ---
 
 ## Analisis
+<<<<<<< HEAD
 <<<<<<< HEAD
    Dengan demikian,hasil eksperimen dapat menunjukkan bahwa :
    -  **Priority Scheduling** memberikan waktu rata-rata (waiting time dan turnaround time) yang lebih rendah karena eksekusi difokuskan pada proses penting.
@@ -230,12 +350,23 @@ Tabel Perbandingan Round Robin dan Priority Scheduling
 - Round Robin = Proses berjalan bergantian (seperti estafet), di mana setiap proses mendapat jatah waktu kecil yang sama (Time Quantum).
 - Priority Scheduling = menentukan urutan eksekusi berdasarkan tingkat Prioritas dan kemudian mengukur seberapa lama proses menunggu dan menyelesaikan tugas.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- **Round Robin (RR)**: Setiap proses dapat waktu sama (quantum 3). Hasilnya adil tapi waktu tunggu dan selesai rata-rata lebih lama (TAT 14, WT 8.5).
+
+- **Priority Scheduling**: Proses dijalankan sesuai prioritas. Lebih cepat (TAT 10.75, WT 5.25) tapi tidak adil karena proses prioritas rendah bisa lama menunggu.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kesimpulan
 <<<<<<< HEAD
+<<<<<<< HEAD
    Berdasarkan hasil eksperimen penjadwalan CPU menggunakan algoritma Round Robin (RR) dan Priority Scheduling, dapat disimpulkan bahwa:
+=======
+
+Dari percobaan di atas, penjadwalan *Round Robin* memberikan waktu yang adil untuk semua proses tetapi membuat waktu tunggu dan selesai jadi lebih lama. Sedangkan *Priority Scheduling* lebih cepat karena menjalankan proses berdasarkan tingkat prioritas, meski proses prioritas rendah harus menunggu lebih lama. Jadi, Round Robin cocok untuk sistem yang butuh keadilan, sementara Priority Scheduling lebih efisien untuk menyelesaikan proses penting lebih dulu.
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
    1. **Round Robin (RR)** memberikan keadilan yang lebih baik karena setiap proses mendapatkan jatah waktu eksekusi secara bergiliran. Algoritma ini cocok untuk sistem interaktif dan multitasking, meskipun performanya sangat bergantung pada besar kecilnya nilai time quantum.
 
@@ -251,6 +382,7 @@ Tabel Perbandingan Round Robin dan Priority Scheduling
 
 ## Quiz
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. Apa perbedaan utama antara Round Robin dan Priority Scheduling? 
    **Jawaban:**  *Round Robin* lebih menekankan keadilan serta pembagian waktu yang merata.Sedangkan,*Priority Schedulling* menekankan urutan berdasarkan tingkat kepentingan proses.
 2. Apa pengaruh besar/kecilnya *time quantum* terhadap performa sistem?
@@ -265,11 +397,28 @@ Tabel Perbandingan Round Robin dan Priority Scheduling
 3. [Mengapa algoritma Priority dapat menyebabkan starvation?]  
    **Jawaban:Starvation pada algoritma Priority Scheduling terjadi karena kedatangan proses berprioritas tinggi yang terus-menerus. Karena CPU harus selalu memilih proses dengan prioritas tertinggi, proses prioritas rendah yang sudah siap akan terus ditunda tanpa batas waktu (preempted), sebab selalu ada proses yang lebih penting yang baru tiba atau sedang berjalan. Hal ini membuat proses berprioritas rendah "kelaparan" dari alokasi CPU. .**  
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Apa perbedaan utama antara Round Robin dan Priority Scheduling?  
+   **Jawaban:**  
+*Round Robin* memberi giliran sama untuk semua proses, sedangkan *Priority Scheduling* menjalankan proses berdasarkan tingkat pentingnya.
+
+2. Apa pengaruh besar/kecilnya time quantum terhadap performa sistem? 
+
+   **Jawaban:**  
+Kalau time quantum terlalu kecil, CPU sering berganti proses, jadi sistem jadi lambat karena terlalu banyak waktu terbuang untuk pergantian (overhead).
+Kalau terlalu besar, proses panjang bisa mendominasi CPU, sehingga sistem terasa tidak adil dan responnya lambat
+3. Mengapa algoritma Priority dapat menyebabkan starvation?
+
+   **Jawaban:**  
+Algoritma Priority bisa menyebabkan starvation karena proses dengan prioritas rendah terus tertunda.
+Kalau selalu ada proses dengan prioritas tinggi yang masuk, proses prioritas rendah tidak pernah mendapat giliran untuk dijalankan.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Apa bagian yang paling menantang minggu ini?  Motor rusak.
 - Bagaimana cara Anda mengatasinya?  Dengan sabar dan memakai motor yang lain.
@@ -279,6 +428,12 @@ Tuliskan secara singkat:
 Mencoba dan mencari referensi
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
+=======
+- Apa bagian yang paling menantang minggu ini?  
+menghitung start dan finish setiap eksperimen.
+- Bagaimana cara Anda mengatasinya?  
+mengatasi dengan mempelajari dengan cermat.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ---
 
 **Credit:**  

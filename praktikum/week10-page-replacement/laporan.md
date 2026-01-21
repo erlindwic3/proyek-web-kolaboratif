@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 10
 Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
 =======
@@ -13,11 +14,21 @@ Topik: ["Manajemen Memori – Page Replacement (FIFO & LRU)"]
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani  
 - **NIM**   : 250202915  
+=======
+# Laporan Praktikum Minggu [10]
+Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
+---
+
+## Identitas
+- **Nama**  : Ani Ngismatul Hawa
+- **NIM**   : 250202914  
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 - **Kelas** : 1IKRB
 
 ---
 
 ## Tujuan
+<<<<<<< HEAD
 > Mengimplementasikan algoritma page replacement FIFO dalam program.
 
 > Mengimplementasikan algoritma page replacement LRU dalam program.
@@ -56,10 +67,29 @@ Topik: ["Manajemen Memori – Page Replacement (FIFO & LRU)"]
 
 3. Algoritma LRU (Least Recently Used): Algoritma yang mengganti halaman berdasarkan riwayat penggunaan; halaman yang paling lama tidak digunakan oleh CPU akan diganti, karena dianggap memiliki probabilitas kecil untuk dibutuhkan kembali dalam waktu dekat.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- Mengimplementasikan algoritma page replacement FIFO dalam program.
+- Mengimplementasikan algoritma page replacement LRU dalam program.
+- Menjalankan simulasi page replacement dengan dataset tertentu.
+- Membandingkan performa FIFO dan LRU berdasarkan jumlah page fault.
+- Menyajikan hasil simulasi dalam laporan yang sistematis.
+---
+
+## Dasar Teori
+- Manajemen Memori adalah pengelolaan RAM oleh sistem operasi agar proses berjalan efisien.
+Page Replacement digunakan saat memori penuh untuk menentukan halaman (page) mana yang harus diganti.
+
+- FIFO (First In First Out) mengganti page yang paling awal masuk ke memori. Algoritma ini sederhana tetapi kurang efisien karena tidak memperhatikan penggunaan page.
+
+- LRU (Least Recently Used) mengganti page yang paling lama tidak digunakan. Algoritma ini lebih efisien dan menghasilkan page fault lebih sedikit, namun implementasinya lebih kompleks.
+
+- Kesimpulan: FIFO mudah diterapkan, sedangkan LRU lebih optimal dalam kinerja memori.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Langkah Praktikum
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. **Menyiapkan Dataset**
 
@@ -134,6 +164,58 @@ git add .
 git commit -m "Minggu 10 - Page Replacement FIFO & LRU"
 git push origin main
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Menyiapkan Dataset
+
+Gunakan reference string berikut sebagai contoh:
+
+> 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2
+Jumlah frame memori: 3 frame.
+
+2. Implementasi FIFO
+
+Simulasikan penggantian halaman menggunakan algoritma FIFO.
+Catat setiap page hit dan page fault.
+Hitung total page fault.
+
+3. Implementasi LRU
+
+Simulasikan penggantian halaman menggunakan algoritma LRU.
+Catat setiap page hit dan page fault.
+Hitung total page fault.
+
+4. Eksekusi & Validasi
+
+Jalankan program untuk FIFO dan LRU.
+Pastikan hasil simulasi logis dan konsisten.
+Simpan screenshot hasil eksekusi.
+
+5. Analisis Perbandingan
+
+Buat tabel perbandingan seperti berikut:
+
+|Algoritma	|Jumlah Page Fault	|Keterangan|
+|---|---|---|
+|FIFO	|...|	...|
+|LRU	|...	|...|
+
+Jelaskan mengapa jumlah page fault bisa berbeda.
+Analisis algoritma mana yang lebih efisien dan alasannya.
+
+6. Commit & Push
+
+```git add .```
+```git commit -m "Minggu 10 - Page Replacement ```
+```FIFO & LRU"```
+```git push origin main```
+
+- Output yang Diharapkan
+- Kode program simulasi di folder code/.
+- Dataset uji di code/reference_string.txt.
+- Screenshot hasil simulasi di screenshots/.
+- Laporan lengkap di laporan.md.
+- Semua hasil telah di-commit ke GitHub.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
@@ -145,6 +227,7 @@ git push origin main
 - Laporan lengkap di `laporan.md`.
 =======
 Tuliskan potongan kode atau perintah utama:
+<<<<<<< HEAD
 ```bash
 praktikum/week10-page-replacement/
 ├─ code/
@@ -155,10 +238,35 @@ praktikum/week10-page-replacement/
 └─ laporan.md
 ```
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
+2. Struktur folder (sesuaikan dengan template repo):
+```
+- praktikum/week10-page-replacement/
+├─ code/
+│  ├─ page_replacement.*
+│  └─ reference_string.txt
+├─ screenshots/
+│  └─ hasil_simulasi.png
+└─ laporan.md
+```
+2. Menyiapkan Dataset
+
+Gunakan reference string berikut sebagai contoh:
+
+```7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2```
+
+3. Buat tabel perbandingan seperti berikut:
+
+|Algoritma|	Jumlah Page Fault	|Keterangan|
+|-----|-----|-----|
+|FIFO|	...|	...|
+|LRU|	...|	...|
 ---
 
 ## Hasil Eksekusi
+<<<<<<< HEAD
 <<<<<<< HEAD
    1. Hasil eksekusi fifo page replacement:
 ![Screenshot](screenshots/Screenshot%202026-01-01%20082908.png)
@@ -175,10 +283,21 @@ praktikum/week10-page-replacement/
 ![Screenshots hasil](./screenshots/Sunmary%20Page.png)
 
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+Sertakan screenshot hasil percobaan atau diagram:
+
+- **FIFO**
+![Screenshot hasil](./screenshots/FIFO.png)
+- **LRU**
+![Screenshot hasil](./screenshots/LRU.png)
+- **Hasil**
+![Screenshot hasil](./screenshots/Perbandingan.png)
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Analisis
+<<<<<<< HEAD
 <<<<<<< HEAD
    1. Tabel FIFO
       | No | Page | Kondisi | Frame 1 | Frame 2 | Frame 3 |
@@ -248,10 +367,60 @@ Berdasarkan praktikum yang dilakukan, dapat disimpulkan bahwa mekanisme *page re
 
 3. Anomali Belady: Percobaan membuktikan bahwa FIFO dapat mengalami Anomali Belady, di mana penambahan jumlah frame justru meningkatkan jumlah page fault, sedangkan LRU bersifat lebih stabil dan konsisten terhadap penambahan memori fisik.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. **Tabel FIFO**
+
+| Langkah | Page | Frame 1 | Frame 2 | Frame 3 | Status     |
+| --------| ---- | ------- | ------- | ------- | ---------- |
+|    1    |   7  |    7    |    -    |    -    | Page Fault |
+|    2    |   0  |    7    |    0    |    -    | Page Fault |
+|    3    |   1  |    7    |    0    |    1    | Page Fault |
+|    4    |   2  |    2    |    0    |    1    | Page Fault |
+|    5    |   0  |    2    |    0    |    1    | Page Hit   |
+|    6    |   3  |    2    |    3    |    1    | Page Fault |
+|    7    |   0  |    2    |    3    |    0    | Page Fault |
+|    8    |   4  |    4    |    3    |    0    | Page Fault |
+|    9    |   2  |    4    |    2    |    0    | Page Fault |
+|    10   |   3  |    4    |    2    |    3    | Page Fault |
+|    11   |   0  |    0    |    2    |    3    | Page Fault |
+|    12   |   3  |    0    |    2    |    3    | Page Hit   |
+|    13   |   2  |    0    |    2    |    3    | Page Hit   |
+
+2. **Tabel LRU**
+
+| Langkah | Page | Frame 1 | Frame 2 | Frame 3 | Status     |
+| ------- | ---- | ------- | ------- | ------- | ---------- |
+|    1    |   7  |    7    |    -    |    -    | Page Fault |
+|    2    |   0  |    7    |    0    |    -    | Page Fault |
+|    3    |   1  |    7    |    0    |    1    | Page Fault |
+|    4    |   2  |    0    |    1    |    2    | Page Fault |
+|    5    |   0  |    1    |    2    |    0    | Page Hit   |
+|    6    |   3  |    2    |    0    |    3    | Page Fault |
+|    7    |   0  |    2    |    3    |    0    | Page Hit   |
+|    8    |   4  |    3    |    0    |    4    | Page Fault |
+|    9    |   2  |    0    |    4    |    2    | Page Fault |
+|    10   |   3  |    4    |    2    |    3    | Page Fault |
+|    11   |   0  |    2    |    3    |    0    | Page Fault |
+|    12   |   3  |    2    |    0    |    3    | Page Hit   |
+|    13   |   2  |    0    |    3    |    2    | Page Hit   |
+
+3. **Perbandingan**
+
+|Algoritma|	Jumlah Page Fault	|Keterangan|
+|-----|-----|-----|
+|FIFO|	10|	Mengganti halaman yang masuk paling awal.|
+|LRU|	9|	Mengganti halaman yang paling lama tidak digunakan.|
+---
+
+## Kesimpulan
+- Manajemen memori dengan teknik page replacement berperan penting dalam mengoptimalkan penggunaan RAM. 
+- Algoritma FIFO mengganti page berdasarkan urutan masuk sehingga mudah diterapkan, namun kurang efisien. Sebaliknya, LRU mengganti page yang paling lama tidak digunakan sehingga lebih efektif mengurangi page fault, meskipun implementasinya lebih kompleks. Oleh karena itu, pemilihan algoritma page replacement harus disesuaikan dengan kebutuhan dan sumber daya sistem.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Quiz
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Apa perbedaan utama FIFO dan LRU?
    **Jawaban:**  FIFO mengganti page yang pertama kali masuk ke memori tanpa melihat seberapa sering atau terakhir page tersebut digunakan, sedangkan LRU mengganti page yang paling lama tidak digunakan berdasarkan riwayat akses.
@@ -267,14 +436,36 @@ Berdasarkan praktikum yang dilakukan, dapat disimpulkan bahwa mekanisme *page re
 3. [Mengapa LRU umumnya menghasilkan performa lebih baik dibanding FIFO?]  
    **Jawaban:Algoritma LRU menghasilkan performa lebih baik karena menggunakan prinsip lokalitas waktu, yaitu memprioritaskan penyimpanan halaman yang baru saja diakses karena kemungkinan besar akan segera digunakan kembali. Berbeda dengan FIFO yang hanya melihat urutan waktu masuk, LRU secara dinamis membuang halaman yang sudah paling lama tidak aktif. Hal ini efektif meminimalkan page fault dan mempercepat kinerja sistem dengan mengurangi frekuensi pengambilan data dari penyimpanan sekunder.**  
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Apa perbedaan utama FIFO dan LRU?
+
+   **Jawaban:**  
+   Perbedaan utama FIFO dan LRU terletak pada dasar penggantian page:
+
+- FIFO (First In First Out) mengganti page yang paling lama masuk ke memori, tanpa memperhatikan apakah page tersebut sering digunakan atau tidak.
+
+- LRU (Least Recently Used) mengganti page yang paling lama tidak digunakan, berdasarkan riwayat akses.
+
+2. Mengapa FIFO dapat menghasilkan Belady’s Anomaly?
+
+   **Jawaban:**  
+
+   FIFO dapat menghasilkan Belady’s Anomaly karena page diganti berdasarkan urutan masuk, bukan tingkat penggunaan, sehingga penambahan frame bisa justru meningkatkan jumlah page fault.
+
+3. Mengapa LRU umumnya menghasilkan performa lebih baik dibanding FIFO?
+ 
+   **Jawaban:**  
+LRU umumnya lebih baik karena mengganti page yang paling lama tidak digunakan, sehingga lebih sesuai dengan pola akses program dan menghasilkan page fault lebih sedikit dibanding FIFO.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
+- Apa bagian yang paling menantang minggu ini? 
+Menghitung FIFO DAN LRU, membuat codingan dan banyak yang error. 
 - Bagaimana cara Anda mengatasinya?  
-
+Membenarkan dan teliti.
 ---
 
 **Credit:**  

@@ -1,15 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 11
 Topik:  Simulasi dan Deteksi Deadlock
 =======
 # Laporan Praktikum Minggu [11]
 Topik: ["Simulasi dan Deteksi Deadlock"]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+# Laporan Praktikum Minggu [11]
+Topik: Simulasi dan Deteksi Deadlock
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani
 - **NIM**   : 290202915  
@@ -19,10 +25,16 @@ Topik: ["Simulasi dan Deteksi Deadlock"]
 - **NIM**   : [250202947]  
 - **Kelas** : [1IKRB]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- **Nama**  : Ani Ngismatul Hawa 
+- **NIM**   : 250202914
+- **Kelas** : 1IKRB
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Tujuan
+<<<<<<< HEAD
 <<<<<<< HEAD
 > Membuat program sederhana untuk mendeteksi deadlock.
 
@@ -40,10 +52,19 @@ Topik: ["Simulasi dan Deteksi Deadlock"]
 4. Memberikan interpretasi hasil uji secara logis dan sistematis.
 5. Menyusun laporan praktikum sesuai format yang ditentukan.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+
+> -  program sederhana untuk mendeteksi deadlock.
+> - Menjalankan simulasi deteksi deadlock dengan dataset uji.
+> - Menyajikan hasil analisis deadlock dalam bentuk tabel.
+> - Memberikan interpretasi hasil uji secara logis dan sistematis.
+> - Menyusun laporan praktikum sesuai format yang ditentukan.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Dasar Teori
+<<<<<<< HEAD
 <<<<<<< HEAD
 Deadlock merupakan sebuah kondisi pada sistem operasi yang terjadi akibat dua atau lebih proses saling menunggu sumber daya yang sedang digunakan oleh proses lain,sehingga tidak ada satu pun proses yang dapat melanjutkan eksekusinya. Kondisi ini umumnya terjadi karena terpenuhinya empat syarat deadlock, yaitu mutual exclusion, hold and wait, no preemption, dan circular wait.
 
@@ -55,10 +76,16 @@ Deteksi deadlock dilakukan dengan memantau keadaan sistem untuk mengidentifikasi
 
 3. Deteksi & RAG: Identifikasi dilakukan menggunakan Resource Allocation Graph (RAG); jika terdapat siklus (cycle) dalam graf alokasi tersebut, maka sistem terdeteksi mengalami deadlock.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- Deadlock adalah kondisi ketika beberapa proses saling menunggu sumber daya satu sama lain sehingga tidak ada proses yang bisa berjalan. Akibatnya, sistem seperti “macet”.
+
+- Simulasi deadlock digunakan untuk menggambarkan bagaimana deadlock bisa terjadi. Dengan simulasi, kita dapat melihat urutan permintaan dan penggunaan sumber daya oleh proses, sehingga lebih mudah memahami penyebab deadlock tanpa harus menunggu kejadian nyata di sistem.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Langkah Praktikum
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. **Menyiapkan Dataset**
 
@@ -126,18 +153,73 @@ git push origin main
 
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
+=======
+
+## 1. Menyiapkan Dataset
+
+Gunakan dataset sederhana yang berisi:
+
+- Daftar proses
+- Resource Allocation
+- Resource Request / Need
+
+```Contoh tabel:```
+
+|Proses|	Allocation|	Request|
+|----|----|---|
+|P1|	R1 |R2|
+|P2|	R2	|R3|
+|P3|	R3	|R1|
+
+## 2. Implementasi Algoritma Deteksi Deadlock
+
+Program minimal harus:
+
+- Membaca data proses dan resource.
+- Menentukan apakah sistem berada dalam kondisi deadlock.
+- Menampilkan proses mana saja yang terlibat deadlock.
+## 3. Eksekusi & Validasi
+
+- Jalankan program dengan dataset uji.
+- Validasi hasil deteksi dengan analisis manual/logis.
+- Simpan hasil eksekusi dalam bentuk screenshot.
+## 4. Analisis Hasil
+
+- Sajikan hasil deteksi dalam tabel (proses deadlock / tidak).
+- Jelaskan mengapa deadlock terjadi atau tidak terjadi.
+- Kaitkan hasil dengan teori deadlock (empat kondisi).
+## 5. Commit & Push
+
+> ```git add .```
+> ```git commit -m "Minggu 11 - Deadlock Detection"```
+> ```git push origin main```
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kode / Perintah
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Kode program deteksi deadlock di folder `code/`.  
 - Dataset uji di `code/dataset_deadlock.csv`.  
 - Screenshot hasil eksekusi di folder `screenshots/`. 
+=======
+Tuliskan potongan kode atau perintah utama:
+## 1. Tabel 
+
+|Proses|	Allocation|	Request|
+|----|----|---|
+|P1|	R1 |R2|
+|P2|	R2	|R3|
+|P3|	R3	|R1|
+
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Hasil Eksekusi
+<<<<<<< HEAD
 ![Screenshot](screenshots/Screenshot%202026-01-01%20134334.png)
 =======
 Tuliskan potongan kode atau perintah utama:
@@ -156,10 +238,15 @@ praktikum/week11-deadlock-detection/
 ## Hasil Eksekusi Def Detect_Deadlock
 ![Screenshot hasil](./screenshots/def%20detect.png)
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+Sertakan screenshot hasil percobaan atau diagram:
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
+![Screenshot hasil](./screenshots/Deadlock.png)
 ---
 
 ## Analisis
+<<<<<<< HEAD
 <<<<<<< HEAD
 Tabel hasil deteksi deadlock :
 | Proses | Status   |
@@ -183,10 +270,19 @@ Deadlock terjadi karena sistem berada dalam kondisi di mana setiap proses menung
 
 3. Hasil simulasi pada file def detect.png membuktikan teori deadlock melalui terbentuknya siklus R1 -> P1 -> R2 -> P2 -> R3 -> P3 -> R1, yang memenuhi syarat Circular Wait. Kondisi ini terjadi karena setiap proses memegang satu sumber daya sambil menunggu sumber daya lain (Hold and Wait) yang bersifat eksklusif (Mutual Exclusion) dan tidak dapat diambil paksa (No Preemption). Akibat terpenuhinya keempat syarat Coffman tersebut secara simultan, sistem mengalami kebuntuan permanen karena tidak ada proses yang dapat menyelesaikan eksekusinya.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+## Tabel Analisis Hasil
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
+|Proses	|Status|
+|---|----|
+|P1	|Deadlock|
+|P2	|Deadlock|
+|P3	|Deadlock|
 ---
 
 ## Kesimpulan
+<<<<<<< HEAD
 <<<<<<< HEAD
 Berdasarkan hasil simulasi deteksi deadlock, sistem teridentifikasi berada dalam kondisi deadlock karena adanya ketergantungan melingkar antar proses dalam penggunaan resource.
 
@@ -198,10 +294,15 @@ Algoritma deteksi deadlock berhasil mengidentifikasi proses-proses yang terlibat
 
 3. Kondisi Stagnasi Sistem: Hasil deteksi menunjukkan bahwa ketika deadlock terjadi, semua proses yang terlibat (P1, P2, P3) akan berhenti secara permanen karena tidak ada sumber daya yang dapat dilepaskan untuk memutus rantai ketergantungan tersebut.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- Sistem terbukti mengalami deadlock. Hal ini terjadi karena setiap proses memegang satu resource dan pada saat yang sama menunggu resource lain yang sedang digunakan oleh proses lain. Akibatnya, semua proses saling menunggu dan tidak ada yang bisa berjalan.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
+- Hasil dari program yang dijalankan sesuai dengan analisis secara logika, yaitu proses P1, P2, dan P3 semuanya terjebak deadlock. Kondisi ini menunjukkan bahwa sistem memenuhi syarat terjadinya deadlock, terutama adanya lingkaran tunggu antar proses. Dengan praktik ini, dapat dipahami bahwa deadlock bisa terjadi jika pengelolaan resource tidak diatur dengan baik.
 ---
 
 ## Quiz
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Apa perbedaan antara *deadlock prevention*, *avoidance*, dan *detection*?  
    **Jawaban:**  
@@ -225,6 +326,36 @@ Algoritma deteksi deadlock berhasil mengidentifikasi proses-proses yang terlibat
    **Jawaban:a.Kelebihan Meningkatkan utilisasi sumber daya karena sistem tidak dibatasi aturan pencegahan yang kaku, sehingga proses berjalan lebih fleksibel. Intervensi hanya dilakukan saat masalah benar-benar terjadi, memungkinkan identifikasi proses spesifik yang terjebak untuk pemulihan yang tepat sasaran.
    b.Kekurangan Menimbulkan beban komputasi (overhead) karena algoritma deteksi harus berjalan rutin. Selain itu, pemulihan sering kali menyebabkan hilangnya data akibat penghentian proses paksa, serta berisiko menimbulkan starvation pada proses tertentu yang terus-menerus dikorbankan.**  
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Apa perbedaan antara deadlock prevention, avoidance, dan detection?
+
+   **Jawaban:**  
+
+- Deadlock Prevention: Mencegah deadlock dari awal dengan aturan ketat.
+
+- Deadlock Avoidance: Menghindari deadlock dengan perhitungan kondisi aman.
+
+- Deadlock Detection: Membiarkan deadlock terjadi lalu mendeteksinya dan memperbaiki.
+2. Mengapa deteksi deadlock tetap diperlukan dalam sistem operasi?
+
+   **Jawaban:**  
+Deteksi deadlock tetap diperlukan karena tidak semua deadlock bisa dicegah atau dihindari.
+Dengan deteksi deadlock, sistem dapat menemukan kondisi macet yang sudah terjadi dan mengambil tindakan (misalnya menghentikan proses), sehingga sistem bisa kembali berjalan normal.
+
+3. Apa kelebihan dan kekurangan pendekatan deteksi deadlock?  
+   **Jawaban:**  
+**A. Kelebihan deteksi deadlock:**
+
+* Resource digunakan lebih efisien
+* Tidak membatasi proses sejak awal
+* Cocok untuk sistem yang kompleks
+
+**B. Kekurangan deteksi deadlock:**
+
+* Deadlock boleh terjadi terlebih dahulu
+* Sistem bisa macet sementara
+* Perlu biaya tambahan untuk mendeteksi dan memulihkan
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
    - Kekurangan:
       Pendekatan ini memerlukan mekanisme tambahan untuk mendeteksi dan memulihkan deadlock, serta berisiko mengganggu proses yang sedang berjalan saat dilakukan pemulihan.

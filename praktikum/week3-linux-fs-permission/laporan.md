@@ -1,14 +1,19 @@
 
 # Laporan Praktikum Minggu [3]
 <<<<<<< HEAD
+<<<<<<< HEAD
 Topik: Manajemen File dan Permission di Linux
 =======
 Topik: [Manajemen File dan Permission di Linux]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+Topik: [Linux-fs-permission]
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani
 - **NIM**   : 250202915  
@@ -25,10 +30,15 @@ Topik: [Manajemen File dan Permission di Linux]
 =======
 - **Nama**  : [Lutfi Khoerunnisa]  
 - **NIM**   : [250202947]  
+=======
+- **Nama**  : [Ani Ngismatul Hawa]  
+- **NIM**   : [250202914]  
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 - **Kelas** : [1IKRB]
 
 ---
 
+<<<<<<< HEAD
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.    
 > Menggunakan perintah ls, pwd, cd, cat untuk navigasi file dan direktori.
@@ -37,10 +47,25 @@ Tuliskan tujuan praktikum minggu ini.
 > Menyusun laporan praktikum dengan struktur yang benar.
 > Mengunggah dokumentasi hasil ke Git Repository tepat waktu.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+## Tujuan 
+Mahasiswa bisa 
+
+> Menggunakan perintah `ls, pwd, cd, cat` untuk navigasi file dan direktori.
+
+> Menggunakan `chmod` dan `chown` untuk manajemen hak akses file.
+
+> Menjelaskan hasil output dari perintah Linux dasar.
+
+> Menyusun laporan praktikum dengan struktur yang benar.
+
+> Mengunggah dokumentasi hasil ke Git Repository tepat waktu.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Dasar Teori
+<<<<<<< HEAD
 <<<<<<< HEAD
    Setiap file dan direktori di Linux memiliki kepemilikan yang terdiri dari tiga bagian: user (pemilik), group (kelompok pengguna), dan others (pengguna lain). Kepemilikan ini menentukan siapa yang memiliki hak akses terhadap file tersebut. Pengguna dan administrator dapat mengubah kepemilikan menggunakan perintah `chown` dan `chgrp`.
 
@@ -58,10 +83,28 @@ Pemilik (Owner) memiliki hak penuh (rwx): Mereka dapat Membaca, Menulis/Mengubah
 2. Grup (Group) memiliki hak terbatas (r-x): Mereka hanya dapat Membaca dan Mengeksekusi file, tetapi tidak dapat memodifikasinya.
 3. Secara keseluruhan, permission ini sering digunakan untuk file yang dapat dieksekusi (seperti skrip atau program) yang boleh dibaca dan dijalankan oleh anggota grup, tetapi hanya boleh dimodifikasi oleh pemiliknya.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. Sistem Operasi
+Mengatur hubungan antara pengguna dan perangkat keras, serta mengelola proses, memori, dan file.
+
+2. Kernel dan System Call
+Kernel adalah inti sistem yang mengatur sumber daya.
+System call digunakan program untuk meminta layanan dari kernel (misalnya membuka atau membaca file).
+
+3. Manajemen File dan Izin Akses
+Tiap file di Linux punya pemilik, grup, dan izin (`read, write, execute`).
+Izin ini menjaga keamanan agar tidak semua orang bisa mengubah file.
+
+4. Perintah Dasar
+`chmod`: mengubah izin file.
+`chown`: mengubah pemilik file.
+`strace`: melihat system call yang dijalankan program.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Langkah Praktikum
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Setup Environment
    - Gunakan Linux (Ubuntu/WSL).
@@ -95,10 +138,68 @@ ls -l percobaan.txt`
    `git add .
    git commit -m "Minggu 3 - Linux File   System & Permission"
    git push origin main`
+=======
+1. Setup Environment
+
+Gunakan Linux (Ubuntu/WSL).
+Pastikan folder kerja berada di dalam direktori repositori Git praktikum:
+`praktikum/week3-linux-fs-permission/`
+Eksperimen 1 – Navigasi Sistem File Jalankan perintah berikut:
+
+`pwd`
+`ls -l`
+`cd /tmp`
+`ls -a`
+
+Jelaskan hasil tiap perintah.
+
+Catat direktori aktif, isi folder, dan file tersembunyi (jika ada).
+
+2. Eksperimen 2 – Membaca File Jalankan perintah:
+
+`cat /etc/passwd | head -n 5`
+
+Jelaskan isi file dan struktur barisnya (user, UID, GID, home, shell).
+
+3. Eksperimen 3 – Permission & Ownership Buat file baru:
+
+`echo "Hello <NAME><NIM>" > percobaan.txt`
+
+`ls -l percobaan.txt`
+
+`chmod 600 percobaan.txt`
+
+`ls -l percobaan.txt`
+
+Analisis perbedaan sebelum dan sesudah chmod.
+
+Ubah pemilik file (jika memiliki izin sudo):
+
+`sudo chown root percobaan.txt`
+
+`ls -l percobaan.txt`
+
+Catat hasilnya.
+
+4. Eksperimen 4 – Dokumentasi
+
+Ambil screenshot hasil terminal dan simpan di:
+
+`praktikum/week3-linux-fs-permission/screenshots/`
+
+Tambahkan analisis hasil pada laporan.md.
+Commit & Push
+
+```git add .
+git commit -m "Minggu 3 - Linux File System & Permission"
+git push origin main
+```
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kode / Perintah
+<<<<<<< HEAD
 1. Hasil observasi perintah Linux dimasukkan ke dalam `laporan.md.`
 2. Screenshot hasil eksekusi disimpan di `screenshots/.`
 3. Laporan lengkap tersimpan di `laporan.md.`
@@ -129,6 +230,15 @@ ls -l percobaan.txt`
 5. Dokumentasi 
 6. Push 
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+``` 
+Hasil observasi perintah Linux dimasukkan ke dalam laporan.md
+Screenshot hasil eksekusi disimpan di screenshots/.
+Laporan lengkap tersimpan di laporan.md.
+Semua hasil telah di-commit ke GitHub tepat waktu.
+
+```
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
@@ -182,9 +292,14 @@ Hello Aster Rifani - 250202915``
          Setelah menjalankan perintah `sudo chown root percobaan.txt`, pemilik file berubah menjadi root sehingga hanya pengguna `root` yang memiliki hak akses membaca dan menulis file tersebut, sementara pengguna lain, termasuk pemilik sebelumnya, tidak dapat mengakses file tersebut.
 =======
 Sertakan screenshot hasil percobaan atau diagram:
+<<<<<<< HEAD
 [Screenshot hasil](./screenshots/Week3.png)
 [Screenshot hasil](./screenshots/week%203%20'.png)
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+![Screenshot hasil](./screenshots/Praktikum%20Linux%201.png)
+![Screenshot hasil](./screenshots/Praktikum%20linux%202.png)
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
  | Nomer | Perintah| Makna Hasil |
 | :--- | :---: | ---: |
@@ -199,17 +314,74 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 <<<<<<< HEAD
 ## Analisis
+<<<<<<< HEAD
    **Eksperimen 1**
       Eksperimen ini bertujuan memahami bagaimana menavigasi dan melihat isi sistem file Linux, termasuk bagaimana melihat direktori saat ini, isi direktori dengan detail, berpindah lokasi, dan melihat file tersembunyi.
    **Eksperimen 2**
       Eksperimen ini memperlihatkan cara membaca isi file teks (dalam hal ini file konfigurasi sistem `/etc/passwd` yang berisi informasi akun pengguna). Penggunaan `head -n 5` membatasi output hanya pada 5 baris pertama agar lebih mudah dipahami.
    **Eksperimen 3**
       Eksperimen ini menjelaskan konsep dasar pengelolaan hak akses (permissions) dan kepemilikan (ownership) file pada Linux. Dengan `chmod`, hak akses file dapat dibatasi agar hanya pemilik yang bisa mengakses. Dengan `chown`, kepemilikan file dapat dialihkan ke user lain (misal root), sehingga akses file juga bergantung pada siapa pemiliknya. Ini penting untuk keamanan dan pengelolaan sistem file.
+=======
+# 1. Hasil perintah 
+
+|Perintah|Fungsi|Hasil yang ditunjukan|
+|--------|------|---------------------| 
+|Pwd| menunjukan direktori aktif| `/home/anihawa059/`|
+|1s -1| menampilkan isi direktori secara detail| file `README-cloudshell.txt` |
+|cd/tmp| pindah ke direktori sementara| berhasil masuk ke `/tmp`|
+|1s -a| lihat semua file termasuk tersembunyi| daftar file sementara (cloud code, mini kube, VS code, dll)|
+
+a. Direktori aktif
+
+`pwd` hasilnya `/home/anihawa059`
+
+`cd/tmp` hasilnya `/tmp` berpindah
+
+b. Isi folder
+
+`1s -a` `/tmp` termasuk file tersembunyi diawali `.` dan `..`
+
+# 2. isi file dan struktur barisnya
+
+|Kolom| Nama kolom| penjelasan| ex|
+|-----|-----------|-----------|---|
+|1| User| nama login pengguna| `root,demon.anihawa059` |
+|2| UID | Nomor identitas unik untuk tiap user| `0` untuk `root`,`1000+` untuk user biasa|
+|3| GID| Nomor identitas grup utama user mengacu ke `/etc/group`|`0,1000,dll`|
+|4|Home| lokasi direktori pribadi user| `/root,/home/anihawa059`|
+|5| shell| program yang dijalankan saat user login| `/bin/bash/usr/sbin/nologin`|
+# 3. Analisis perbedaan sebelum dan sesudah chmod 
+a. Sebelum Chmod 600
+
+Izin `-rw-rw-r--` 
+> 1. Pemilik bisa baca dan tulis
+> 2. Grup bisa baca dan tulis
+> 3. Orang lain bisa baca
+
+b. Sesudah Chmod 600
+
+ Izin `-rw-------`
+> 1.  hanya pemilik bia baca dan tulis
+> 2. Grup dan orang lain tidak bisa akses
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kesimpulan
+<<<<<<< HEAD
 Manajemen file di Linux melibatkan kemampuan untuk menavigasi sistem file dengan menggunakan perintah seperti `pwd` untuk mengetahui direktori saat ini, `ls` untuk melihat isi direktori, dan cd untuk berpindah antar folder. Selain itu, perintah `ls -a` memungkinkan pengguna melihat file tersembunyi, sehingga memudahkan dalam mengelola dan memahami struktur direktori di sistem Linux. Pemahaman dasar tentang cara membaca file menggunakan perintah `cat` dan `head` juga penting untuk memeriksa isi file teks, terutama file konfigurasi sistem.
+=======
+Dalam Linux, permission (izin akses) digunakan untuk mengatur siapa yang boleh membaca (read), menulis (write), atau menjalankan (execute) sebuah file atau folder.
+Dari percobaan tadi terlihat bahwa:
+
+> Hanya pemilik file (`root`) yang bisa mengakses file jika izinnya `rw-------.`
+
+> Perintah `chmod` digunakan untuk mengubah izin akses.
+
+> Perintah `chown` digunakan untuk mengubah pemilik file.ss
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 Di sisi lain, manajemen permission dan kepemilikan file sangat krusial untuk menjaga keamanan dan kontrol akses di Linux. Dengan menggunakan perintah `chmod`, pengguna dapat mengatur hak akses file agar hanya pemilik atau grup tertentu yang dapat membaca, menulis, atau mengeksekusi file tersebut. Perintah `chown` memungkinkan penggantian pemilik file, yang berdampak langsung pada siapa yang memiliki kontrol penuh atas file tersebut. Kombinasi pengaturan permission dan ownership membantu melindungi file dari akses yang tidak diinginkan dan menjaga integritas sistem.
 =======
@@ -230,6 +402,7 @@ head: Perintah ini dirancang untuk menampilkan baris-baris awal dari suatu file 
 ---
 
 ## Quiz
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. Apa fungsi dari perintah `chmod`? 
    **Jawaban:**  Perintah `chmod` (change mode) digunakan untuk mengubah hak akses (permission) file atau direktori di sistem Linux/Unix. Dengan `chmod`, kamu bisa mengatur siapa saja yang boleh membaca (read), menulis (write), atau mengeksekusi (execute) sebuah file atau direktori.
@@ -268,11 +441,31 @@ head: Perintah ini dirancang untuk menampilkan baris-baris awal dari suatu file 
 Peran Sentral chmod dan chown dalam Keamanan Linux 
 **Chmod (Change Mode) dan chown (Change Owner) merupakan fondasi utama dari model keamanan file di Linux, yang secara sinergis menerapkan Prinsip Hak Istimewa Paling Rendah (Principle of Least Privilege).Peran chown (Kepemilikan dan Akuntabilitas)Perintah chown menetapkan Kepemilikan (Ownership) file (yaitu User dan Group), yang merupakan penentuan siapa yang memiliki kendali administratif dan akuntabilitas atas file tersebut. Dengan menentukan owner, sistem secara efektif membagi pengguna menjadi tiga kategori akses: Pemilik, Anggota Grup, dan Lainnya. Pemisahan ini krusial untuk mengisolasi hak istimewa; misalnya, file sistem sensitif seringkali dimiliki oleh root untuk mencegah modifikasi oleh user atau service dengan hak akses terbatas.Peran chmod (Hak Akses dan Integritas) Perintah chmod kemudian mengatur Hak Akses (Permissions)—yaitu izin Baca (r), Tulis (w), dan Eksekusi (x)—untuk ketiga kategori yang telah ditetapkan oleh chown. Fungsi utama chmod adalah untuk membatasi risiko dengan memastikan bahwa setiap user dan service hanya memiliki izin minimal yang mutlak diperlukan.-Analisis Permission (rwxr-xr--)Struktur permission, seperti rwxr-xr--, menjadi bukti konkret dari pengaturan keamanan ini. Kode tersebut mengartikan:Pemilik (rwx atau 7) memiliki izin Penuh (Baca, Tulis, Eksekusi).Grup (r-x atau 5) hanya memiliki izin Baca dan Eksekusi, dilarang memodifikasi (Tulis).Lainnya (r-- atau 4) hanya memiliki izin Baca.Kombinasi ownership dan permission ini memastikan bahwa file sensitif tidak dapat diubah (integritas terjaga) atau dijalankan (eksekusi dicegah) oleh pihak yang tidak berwenang, menjamin stabilitas dan keamanan sistem secara menyeluruh.**
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+1. [Apa fungsi dari perintah `chmod?`]  
+   **Jawaban:** 
+   Fungsi perintah `chmod` (change mode) adalah untuk mengubah izin akses (permission) pada file atau direktori di sistem Linux. 
+2. [Apa arti dari kode permission `rwxr-xr--`?]  
+   **Jawaban:**  
+   `rwxr-xr-` artinya:
+ Pemilik bisa baca, tulis, dan jalankan.
+ Grup bisa baca dan jalankan.
+ Orang lain hanya bisa baca saja.
+3. [Jelaskan perbedaan antara `chown` dan `chmod`.]  
+   **Jawaban:**  
+```
+chown → mengubah pemilik file atau folder (siapa yang punya).
+Contoh: `chown root file.txt` → pemiliknya jadi root.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
+chmod → mengubah izin akses file atau folder (siapa yang boleh baca, tulis, jalankan).
+Contoh: chmod 600 file.txt → hanya pemilik yang bisa baca dan tulis.
+```
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
+<<<<<<< HEAD
 <<<<<<< HEAD
 - Apa bagian yang paling menantang minggu ini? 
  laptop nya ngelag 
@@ -284,6 +477,13 @@ Tuliskan secara singkat:
 - Bagaimana cara Anda mengatasinya?  
 **Jawaban:Mengulang**
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+- Apa bagian yang paling menantang minggu ini? 
+saat codingan menginput code ada code yang error 
+- Bagaimana cara Anda mengatasinya? 
+mengulangi dari awal dan menghapus yang salah 
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ---
 
 **Credit:**  

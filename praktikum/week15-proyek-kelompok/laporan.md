@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Laporan Proyek Kelompok: Mini Simulasi Sistem Operasi
 
 ---
@@ -24,11 +25,30 @@ Topik: [Manajemen File dan Permission di Linux]
 - **Nama**  : [Lutfi Khoerunnisa]  
 - **NIM**   : [250202947]  
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+# Laporan Proyek Kelompok: Mini Simulasi Sistem Operasi
+
+---
+
+## Nama Kelompok
+
+- **Nama Anggota Kelompok:**
+
+1. Erlin Dwi Cahyanti (250202911)
+2. Ani Ngismatul Hawa (250202914)
+3. Aster Rifani (250202915)
+4. Dyah Retno Wulandari (250202934)
+5. Lutfi Khoerunnisa (250202947)
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 - **Kelas** : [1IKRB]
 
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ## 1. Pendahuluan
 
 ## A. Latar Belakang
@@ -48,6 +68,7 @@ Tuliskan tujuan praktikum minggu ini.
 3. MAhasiswa mampu mengelola kode: Menggunakan Git untuk mengelola kode dengan baik, termasuk pembuatan dan penggabungan branch secara rapi.
 4. Mahasiswa mampu memastikan aplikasi bisa dijalankan: Menggunakan Docker agar aplikasi dapat dijalankan dengan lancar di berbagai lingkungan.
 5. Membuat dokumentasi dan presentasi: Membuat dokumentasi yang terstruktur serta menyampaikan hasil pengujian aplikasi melalui presentasi yang jelas.
+<<<<<<< HEAD
 
 ---
 
@@ -141,6 +162,85 @@ Pemilik (Owner) memiliki hak penuh (rwx): Mereka dapat Membaca, Menulis/Mengubah
 2. Grup (Group) memiliki hak terbatas (r-x): Mereka hanya dapat Membaca dan Mengeksekusi file, tetapi tidak dapat memodifikasinya.
 3. Secara keseluruhan, permission ini sering digunakan untuk file yang dapat dieksekusi (seperti skrip atau program) yang boleh dibaca dan dijalankan oleh anggota grup, tetapi hanya boleh dimodifikasi oleh pemiliknya.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+
+---
+
+## 2. Arsitektur Aplikasi
+
+### A. Desain Arsitektur Umum
+
+Arsitektur umum Mini Simulasi Sistem Operasi ini dibangun di atas tiga lapisan integrasi yang menghubungkan logika algoritma dengan lingkungan eksekusi modern. Pada lapisan inti, Logika Manajemen Memori dan Penjadwalan berfungsi sebagai otak sistem yang memproses antrean data menggunakan algoritma seperti FIFO atau LRU serta mengatur prioritas tugas. Logika ini kemudian dibungkus dalam Lapisan Kontainerisasi (Docker), yang bertindak sebagai lingkungan terisolasi untuk mengatur batas penggunaan sumber daya fisik, seperti membatasi kapasitas CPU dan RAM agar simulasi tidak mengonsumsi seluruh daya host.
+Aliran datanya dimulai dari input proses yang dijadwalkan oleh unit scheduling, lalu dialokasikan ke unit memory management untuk dipetakan ke dalam slot memori yang tersedia, sementara seluruh aktivitas tersebut dipantau secara real-time melalui metrik performa kontainer.  
+
+## Deskripsi Modul
+
+2. Deskripsi Modul
+
+Aplikasi simulasi Sistem Operasi ini dibagi menjadi beberapa modul terpisah untuk menjaga struktur kode tetap rapi, mudah dipahami, dan mudah dikembangkan. Setiap modul merepresentasikan satu konsep atau fungsi utama dalam Sistem Operasi.
+
+2.1 Modul CPU Scheduling
+
+| Komponen   | Keterangan                                                                            |
+| ---------- | ------------------------------------------------------------------------------------- |
+| Nama Modul | Scheduling                                                                            |
+| File Utama | FCFS.java, SJF.java, Process.java                                                     |
+| Deskripsi  | Mensimulasikan penjadwalan proses pada CPU                                            |
+| Algoritma  | 1. First Come First Serve (FCFS). 2. Shortest Job First (SJF-non-preemptiva)          |
+| Input      | Data set proses (PID, Arrival Time, Burst Time)                                       |
+| Output     | 1. Tabel hasil metrik per proses. 2. Ringkasan metrik (Avg Waiting & Turnaround Time) |
+
+Fungsi Utama:
+
+- Membaca data proses dari file process.csv
+- Mengurutkan proses sesuai algoritma yang dipilih
+
+Menghitung:
+Waiting Time
+Turnaround Time
+Rata-rata Waiting Time
+Menampilkan hasil dalam bentuk tabel ASCII di terminal
+
+Input:
+Dataset proses (PID, Arrival Time, Burst Time)
+
+Output:      
+Tabel hasil per proses
+Ringkasan metrik penjadwalan
+
+2.2 Modul Page Replacement
+
+Nama Modul: paging
+File Utama: FIFO.java, LRU.java
+
+Deskripsi:
+Modul Page Replacement digunakan untuk mensimulasikan penggantian halaman pada memori utama dengan algoritma FIFO (First In First Out) dan LRU (Least Recently Used).
+
+| Komponen   | Keterangan                                                                          |
+| ---------- | ----------------------------------------------------------------------------------- |
+| Nama Modul | paging                                                                              |
+| File Utama | "FIFO.java, LRU.java"                                                               |
+| Deskripsi  | Mensimulasikan penggantian halaman pada memori utama (Virtual Memory)               |
+| Algoritma  | 1. First-In First-Out (FIFO). 2. Least Recently Used (LRU)                          |
+| Input      | 1. Jumlah Frame (Input CLI). 2. Dataset referensi halaman (pages.txt)               |
+| Output     | "1. Tabel status Hit/Fault per referensi. 2. Ringkasan (Total Fault, Fault Rate %)" |
+
+Fungsi Utama:
+1. Membaca urutan referensi halaman dari file pages.txt
+2. Menerima input jumlah frame dari pengguna melalui CLI
+3. Menentukan page hit dan page fault
+4. Menghitung fault rate
+
+## Input:
+- Jumlah frame
+- Dataset referensi halaman
+
+## Output:
+- Total page reference
+- Jumlah page fault
+- Jumlah page hit
+- Fault rate 
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
@@ -156,12 +256,19 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
 
 ## Langkah Praktikum
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 1. Inisialisasi Proyek: Membuat struktur folder kerja dan menyiapkan file sumber Java (MainApp, Process, FCFS, FIFO).
 
 2. Persiapan Data: Menyusun file proses.csv di dalam folder data sebagai input otomatis untuk simulasi penjadwalan CPU.
 
+<<<<<<< HEAD
 3. Konfigurasi Docker: Membuat Dockerfile dan melakukan build image mini-os-kelompok menggunakan basis JDK 17 .
+=======
+3. Konfigurasi Docker: Membuat Dockerfile dan melakukan build image mini-os-kelompok menggunakan basis JDK 17.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 4. Penanganan Error: Mengatasi kendala INTERNAL_ERROR pada Docker dengan melakukan restart layanan dan pembersihan cache.
 
@@ -177,14 +284,26 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
 
 ## A. Output Modudl Secheduling (FCFS)
 
+<<<<<<< HEAD
 
 | PID | Arrival | Burst | Finish | TAT | WT |
 |---|---|---|---|---|---|
+=======
+=================================================================
+| PID | Arrival | Burst | Finish | TAT | WT |
+
+---
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 | P1 | 0 | 10 | 10 | 10 | 0 |
 | P2 | 2 | 5 | 15 | 13 | 8 |
 | P3 | 4 | 8 | 23 | 19 | 11 |
 
+<<<<<<< HEAD
 
+=======
+=================================================================
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 Ringkasan Metrik:
 
 - Rata-rata Turnaround Time (Avg TAT): 14.00
@@ -192,13 +311,23 @@ Ringkasan Metrik:
 
 # B. Output Modul Page Replacement (FIFO):
 
+<<<<<<< HEAD
 | Ref Halaman | Status | Isi Frame |
 |--|--|--|
+=======
+## | Ref Halaman | Status | Isi Frame |
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 | 7 | FAULT | [7] |
 | 0 | FAULT | [7, 0] |
 | 1 | FAULT | [7, 0, 1] |
 | 2 | FAULT | [0, 1, 2] |
 
+<<<<<<< HEAD
+=======
+=====================================================================
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 - Total Page Fault : 4
 - Fault Rate (%) : 100.00% (pada 4 referensi pertama)
 
@@ -249,9 +378,17 @@ docker run -it mini-os-kelompok
 ## Refleksi Diri:
 Untuk bagian refleksi, Anda bisa menuliskan: "Bagian paling menantang adalah melakukan konfigurasi Dockerfile agar dapat melakukan compile Java secara otomatis. Cara mengatasinya adalah dengan menggunakan base image openjdk-slim dan melakukan riset pada dokumentasi resmi Docker."
 
+```bash
+docker run -it mini-os-kelompok
+```
+
+Refleksi Diri:
+Bagian paling menantang adalah melakukan konfigurasi Dockerfile agar dapat melakukan compile Java secara otomatis. Cara mengatasinya adalah dengan menggunakan base image openjdk-slim dan melakukan riset pada dokumentasi resmi Docker.
+
 ---
 
 ## Hasil Eksekusi
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 1. Hasil Docker
@@ -267,6 +404,17 @@ Sertakan screenshot hasil percobaan atau diagram:
 [Screenshot hasil](./screenshots/Week3.png)
 [Screenshot hasil](./screenshots/week%203%20'.png)
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+
+1. Hasil Docker
+   ![Screenshot hasil](./screenshots/Build%20.jpeg)
+
+2. Hasil Simulasi
+   ![Screenshot hasil](./screenshots/Simulasi%20FIFO.jpeg)
+
+3. Tabel Perhitungan CPU Secheduling
+   ![Screenshot hasil](./screenshots/Tabel%20FCFS.jpeg)
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
  | Nomer | Perintah| Makna Hasil |
 | :--- | :---: | ---: |
@@ -280,6 +428,9 @@ Sertakan screenshot hasil percobaan atau diagram:
 |3.| ls -a | Fungsi dari perintah ls -a di Linux adalah untuk menampilkan daftar semua file dan direktori dalam lokasi saat ini, termasuk file tersembunyi.ls: Perintah dasar untuk mendaftar isi suatu direktori.-a (all): Opsi ini (flag) memerintahkan ls untuk menyertakan file yang tersembunyi|
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ## Pembagian Tugas
 
 | Nama                 |    NIM    |    Peran tugas |
@@ -290,6 +441,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 | Lutfi Khoerunnisa    | 250202947 |  Dokumentasi 1 |
 | Aster Rifani         | 250202915 |  Dokumentasi 2 |
 
+<<<<<<< HEAD
 =======
 | Nomer | Perintah| Makna Hasil |
 | :--- | :---: | ---: |
@@ -340,6 +492,8 @@ Tuliskan secara singkat:
 - Bagaimana cara Anda mengatasinya?  
 **Jawaban:Mengulang**
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ---
 
 **Credit:**  

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 7
 Topik: Sinkronisasi Proses dan Masalah Deadlock 
 
@@ -13,12 +14,15 @@ Topik: Sinkronisasi Proses dan Masalah Deadlock
    - Muslimah Nuraini (250202980)
 - Kelas: 1IKRB
 =======
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 # Laporan Praktikum Minggu [7]
 Topik: Sinkronisasi Proses dan Masalah Deadlock
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 - **Nama Kelompok**  :
 
  [Lutfi Khoerunnisa Bertugas Dokumentasi] [250202947] ,
@@ -49,16 +53,35 @@ Topik: Sinkronisasi Proses dan Masalah Deadlock
 4.  Berkolaborasi dalam tim untuk menyusun laporan analisis.
 
 5.  Menyajikan hasil studi kasus secara sistematis.
+=======
+- **Nama**  : 
+1. Ani Ngismatul Hawa (250202931) Dokumentasi
+2. Asyifani Lutfiana Nadzif (250202931) Ketua/Analisis
+3. Erlin Dwi Cahyanti (250202911) Simulasi
+- **Kelas** : 1IKRB
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Pendahuluan
+<<<<<<< HEAD
 Masalah Dining Philosophers merupakan model klasik dalam ilmu sistem operasi yang mengilustrasikan risiko deadlock pada proses konkurensi. Dalam skenario ini, lima filosof berbagi lima garpu, di mana setiap filosof memerlukan dua garpu untuk melakukan aktivitas makan. Tanpa adanya mekanisme pencegahan, kondisi deadlock dapat muncul ketika semua filosof menahan satu garpu dan menunggu garpu lainnya yang dipegang oleh filosof tetangga, sehingga terbentuk siklus tunggu.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+Dining Philosophers Problem adalah masalah klasik dalam sistem operasi yang mengilustrasikan permasalahan sinkronisasi proses dan potensi terjadinya *deadlock* ketika beberapa proses bersaing untuk mendapatkan sumber daya terbatas (garpu/chopstick).  
+Praktikum ini bertujuan untuk:
+- Memahami 4 kondisi terjadinya deadlock
+- Mengimplementasikan versi yang rentan deadlock
+- Menerapkan solusi pencegahan deadlock menggunakan semaphore
+- Menganalisis perbedaan kedua versi
+
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Dasar Teori
+<<<<<<< HEAD
 - Deadlock
    Terjadinya dua atau lebih proses saling menunggu sumber daya yang tidak akan pernah terjadi karena saling mengunci. Ada empat kondisi yang menyebabkan deadlock,yaitu:  
     1. Mutual Exclusion
@@ -86,6 +109,10 @@ Masalah Dining Philosophers merupakan model klasik dalam ilmu sistem operasi yan
    - Untuk makan, setiap filsuf membutuhkan dua garpu.
    - Jika semua filsuf mengambil satu garpu dan menunggu garpu kedua, deadlock dapat terjadi.
 <<<<<<< HEAD
+=======
+- Sinkronisasi proses adalah cara komputer mengatur beberapa proses (program yang sedang berjalan) agar tidak saling bentrok ketika memakai resource yang sama.
+- Deadlock adalah kondisi ketika dua atau lebih proses saling menunggu satu sama lain, sehingga semuanya tidak bisa lanjut selamanya. 
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
@@ -112,6 +139,7 @@ Masalah Dining Philosophers merupakan model klasik dalam ilmu sistem operasi yan
 
 ---
 ## Langkah Praktikum
+<<<<<<< HEAD
 <<<<<<< HEAD
 1. **Persiapan Tim**
    - Bentuk kelompok beranggotakan 3–4 orang.  
@@ -159,10 +187,21 @@ Masalah Dining Philosophers merupakan model klasik dalam ilmu sistem operasi yan
 
 6. **Commit & Push**
    ```bash
+=======
+1. Bentuk kelompok 3-4 orang.
+2. Siapkan kode yang akan dijalankan.
+3. Lakukan eksperimen 1 yaitu implementasi versi rentan deadlock.
+4. Lakukan eksperimen 2 yaitu implementasi solusi pencegahan deadlock.
+5. Lakukan dokumentasi screenshot dari hasil eksperimen.
+6. Analisis hasil eksperimen.
+7. Lakukan push di Github
+```bash
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
    git add .
    git commit -m "Minggu 7 - Sinkronisasi Proses & Deadlock"
    git push origin main
    ```
+<<<<<<< HEAD
 =======
 1. Bentuk kelompok beranggotakan 3–4 orang.
 2. Implementasikan versi sederhana dari masalah Dining Philosophers tanpa mekanisme pencegahan deadlock.
@@ -176,12 +215,18 @@ Analisis hasil modifikasi dan buktikan bahwa deadlock telah dihindari.
 5. Jelaskan empat kondisi deadlock dari versi pertama dan bagaimana kondisi tersebut dipecahkan pada versi fixed
 6. Commit dan upload tugas tepat waktu.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kode / Perintah
 <<<<<<< HEAD
+<<<<<<< HEAD
 ```text
+=======
+   ```text
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
      while true:
        think()
        pick_left_fork()
@@ -189,6 +234,7 @@ Analisis hasil modifikasi dan buktikan bahwa deadlock telah dihindari.
        eat()
        put_left_fork()
        put_right_fork()
+<<<<<<< HEAD
  ```
 =======
 Tuliskan potongan kode atau perintah utama:
@@ -202,10 +248,15 @@ while true:
   put_right_fork()
   ```
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+     
+```
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Hasil Eksekusi
+<<<<<<< HEAD
 1. **Eksperimen 1 – Simulasi Dining Philosophers (Deadlock Version)**
 <<<<<<< HEAD
 ![Screenshot](screenshots/DEADLOCK.png)
@@ -242,10 +293,38 @@ while true:
 
 ## Diskusi
    Dari hasil percobaan, dapat diketahui bahwa versi pertama program mengalami deadlock karena setiap filosof saling menunggu garpu yang tidak pernah dilepas. Setelah diterapkan mekanisme pencegahan (semaphore/aturan pengambilan garpu), program dapat berjalan tanpa kebuntuan. Hal ini menunjukkan bahwa sinkronisasi sangat penting untuk memastikan proses dapat berjalan bersamaan tanpa saling menghambat, serta membuktikan bahwa pengaturan akses sumber daya mampu mencegah deadlock secara efektif.
+=======
+Sertakan screenshot hasil percobaan atau diagram:
+### Hasil Eksperimen 1 Simulasi Dining Philosophers (Deadlock Version)
+![Screenshot hasil](./screenshots/Deadlock.png.jpg)
+- Setiap filsuf mengambil garpu kiri terlebih dahulu, kemudian garpu kanan. 
+- Ketika semua filsuf mengambil garpu kiri secara bersamaan → masing-masing menunggu garpu kanan → deadlock total terjadi.
+### Hasil Eksperimen 2 Versi Fixed (Menggunakan Semaphore / Monitor)
+![Screenshot hasil](./screenshots/concurrency.png.jpg)
+- Simulasi berjalan tanpa deadlock selama >100.000 iterasi. Tidak ada kondisi semua filsuf memegang satu garpu dan menunggu selamanya.
+- Filsuf nomor 0–3 mengambil garpu dari kiri → kanan.
+Filsuf nomor 4 (terakhir) mengambil garpu kanan dulu → kiri (urutan terbalik).
+Solusi ini memecahkan circular wait.
+
+
+
+---
+
+## Analisis Kondisi Deadlock
+### Tabel analisis 4 kondisi deadlock pada dining philosophers problem
+
+| No | Kondisi Deadlock         | Terjadi pada Versi Deadlock? | Penjelasan pada Versi Deadlock                                                                                  | Solusi pada Versi Fixed (Bebas Deadlock)                                                                                 | Kondisi yang Dihilangkan |
+|----|---------------------------|------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| 1  | *Mutual Exclusion*      | Ya                           | Setiap garpu hanya boleh dipegang oleh satu filsuf pada satu waktu (menggunakan Lock())                        | Tetap dipertahankan (garpu tetap eksklusif, tidak bisa diubah)                                                             | –                         |
+| 2  | *Hold and Wait*         | Ya                           | Filsuf sudah memegang garpu kiri sambil menunggu garpu kanan tanpa melepas garpu kiri terlebih dahulu           | Tetap ada, tetapi tidak menjadi masalah karena sudah tidak ada circular wait                                            | –                         |
+| 3  | *No Preemption*         | Ya                           | Garpu yang sudah dipegang tidak dapat direbut secara paksa oleh filsuf lain                                      | Tetap dipertahankan (tidak ada mekanisme preemption)                                                                       | –                         |
+| 4  | *Circular Wait*         | Ya                           | Terjadi rantai sirkular: F0 → F1 → F2 → F3 → F4 → F0 (masing-masing menunggu garpu kanannya yang dipegang tetangga sebelah kiri) | *DIHILANGKAN* dengan resource ordering: filsuf ke-4 mengambil garpu kanan dulu → kiri (urutan terbalik). Tidak mungkin terbentuk lingkaran lagi. | Circular Wait             |  
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
 ---
 
 ## Kesimpulan
+<<<<<<< HEAD
    1. Analisis Kode Awal (Deadlock Terjadi): Kode Filosof Makan awal membuktikan bahwa jika semua empat kondisi Deadlock (Mutual Exclusion, Hold and Wait, No Preemption, dan Circular Wait) terpenuhi secara simultan, Deadlock pasti terjadi, mengakibatkan sistem macet permanen (Starvation).
    2. Sinkronisasi Proses menekankan bahwa Mutual Exclusion (Saling Pengecualian) adalah syarat fundamental untuk menjaga integritas data dan mencegah Race Condition di Critical Section. Namun, meskipun Mutual Exclusion diterapkan, kegagalan dalam manajemen sumber daya tetap dapat terjadi.
    3. Solusi untuk Deadlock terletak pada pelanggaran salah satu dari empat kondisi pembentuknya. Analisis modifikasi kode, seperti membatasi jumlah proses menjadi N-1 (misalnya, 4 filosof untuk 5 garpu), secara efektif menghindari kebuntuan permanen. Strategi ini berhasil karena memutus rantai tunggu melingkar dan menjamin bahwa selalu ada jalan keluar (safe state), sehingga semua proses pada akhirnya dapat maju.
@@ -274,7 +353,15 @@ Strategi penanganan Deadlock yang paling efektif adalah dengan membatasi jumlah 
 
 Dari hasil percobaan, dapat diketahui bahwa versi pertama program mengalami deadlock karena setiap filosof saling menunggu garpu yang tidak pernah dilepas. Setelah diterapkan mekanisme pencegahan (semaphore/aturan pengambilan garpu), program dapat berjalan tanpa kebuntuan. Hal ini menunjukkan bahwa sinkronisasi sangat penting untuk memastikan proses dapat berjalan bersamaan tanpa saling menghambat, serta membuktikan bahwa pengaturan akses sumber daya mampu mencegah deadlock secara efektif.
 
+=======
+- Deadlock dapat dicegah dengan cukup menghilangkan satu kondisi saja, yaitu Circular wait.
+- Pada versi fixed, kami menerapkan solusi resource hierarchy/ordering (filsuf terakhir mengambil garpu dalam urutan terbalik) sehingga kondisi ke-4 tidak pernah terpenuhi → deadlock tidak mungkin terjadi meskipun 3 kondisi lainnya tetap ada.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ---
+## HASIL DISKUSI 
+- Solusi paling sederhana dan efisien adalah resource ordering (urutan pengambilan garpu yang konsisten).
+- Solusi alternatif (misalnya batas 4 filsuf makan bersamaan menggunakan semaphore(4)) juga efektif, tetapi mengurangi concurrency.
+- Dalam praktik nyata (contoh: database, thread di Java/Python), solusi serupa digunakan (try-lock dengan timeout, resource hierarchy, dll).
 
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
@@ -287,6 +374,7 @@ Dari hasil percobaan, dapat diketahui bahwa versi pertama program mengalami dead
 
 ## Quiz
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. Sebutkan empat kondisi utama penyebab deadlock.
    **Jawaban:** 
     - Mutual Exclusion
@@ -297,6 +385,26 @@ Dari hasil percobaan, dapat diketahui bahwa versi pertama program mengalami dead
    **Jawaban:**  
    karena banyak proses atau thread yang berjalan secara bersamaan (concurrent) sering kali harus mengakses sumber daya yang sama, seperti memori, file, atau variabel bersama.
 3. Jelaskan perbedaan antara *semaphore* dan *monitor*. 
+=======
+1. Sebutkan empat kondisi utama penyebab deadlock. 
+
+   **Jawaban:**  
+   a. Mutual Exclusion
+
+   b. Hold and Wait
+
+   c. No Preemption
+
+   d. Circular Wait
+
+2. Mengapa sinkronisasi diperlukan dalam sistem operasi?
+
+   **Jawaban:**  
+   Sinkronisasi diperlukan untuk mengatur akses proses/thread terhadap shared resources agar tidak terjadi race condition, inkonsistensi data, atau deadlock, sekaligus menjaga integritas dan correctness program concurrent.
+
+3. Jelaskan perbedaan antara semaphore dan monitor. 
+
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
    **Jawaban:**  
    **semaphore** adalah variabel integer yang menggunakan operasi `wait(P)` dan `signal(V)` untuk mengontrol akses ke sumber daya bersama, sementara **monitor** adalah tipe data abstrak yang hanya memperbolehkan satu proses untuk mengakses sumber daya kritis pada satu waktu dan secara otomatis mengelola penguncian.
 =======
@@ -311,6 +419,19 @@ Dari hasil percobaan, dapat diketahui bahwa versi pertama program mengalami dead
    **Jawaban:perbedaan utama antara Semaphore dan Monitor adalah pada tingkat abstraksi dan penanganan Mutual Exclusion: Semaphore adalah variabel integer primitif berlevel rendah yang memerlukan programmer untuk secara eksplisit memanggil operasi wait dan signal untuk menjamin sinkronisasi, menjadikannya rentan terhadap kesalahan (bug); sebaliknya, Monitor adalah konstruksi bahasa tingkat tinggi berbasis objek yang mengelompokkan data bersama dan prosedur aksesnya, di mana Mutual Exclusion dijamin secara implisit oleh kompiler, menjadikannya mekanisme yang lebih aman, terstruktur, dan kurang rentan terhadap kesalahan programmer.**  
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
+| No | Aspek                          | Semaphore                                              | Monitor                                                  |
+|---|--------------------------------|--------------------------------------------------------|----------------------------------------------------------|
+| 1 | Tingkat Abstraksi              | Low-level (primitif sinkronisasi)                      | High-level (disediakan oleh bahasa pemrograman)          |
+| 2 | Mutual Exclusion               | Harus diatur manual (binary semaphore)                 | Otomatis dijamin (hanya 1 thread yang masuk ke monitor)  |
+| 3 | Mekanisme Sinkronisasi         | wait() / signal() (atau acquire() / release()) | wait(), notify(), notifyAll() pada condition variable |
+| 4 | Condition Variable             | Tidak ada (harus pakai loop manual)                    | Ada (bisa menunggu kondisi tertentu dengan aman)         |
+| 5 | Pengelolaan Antrian            | Manual oleh programmer                                 | Otomatis dikelola oleh runtime bahasa                   |
+| 6 | Risiko Kesalahan               | Tinggi (lupa signal() → deadlock)                    | Rendah (lebih aman karena otomatis)                      |
+| 7 | Contoh Implementasi            | POSIX semaphore, Python threading.Semaphore, C       | Java synchronized, Python threading.Condition, C# lock |
+| 8 | Fleksibilitas                  | Sangat fleksibel (bisa counting > 1)                   | Lebih terbatas, tapi lebih mudah dan aman digunakan     |
+| 9 | Digunakan untuk                | Binary semaphore = mutex, counting semaphore = resource pool | Seluruh objek/kelas yang perlu sinkronisasi             |
+
+
 ---
 
 ## Refleksi Diri
@@ -320,11 +441,17 @@ Tuliskan secara singkat:
 - Bagaimana cara Anda mengatasinya? Minum Promag  
 =======
 - Apa bagian yang paling menantang minggu ini?  
+<<<<<<< HEAD
 **Menjalankan pseudocode**
 - Bagaimana cara Anda mengatasinya?  
 **Berlatih dan Mencoba**
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
+=======
+> Dalam menjalankan pseudocode.
+- Bagaimana cara Anda mengatasinya?  
+> Dengan cara berdiskusi dengan kelompok dan menggunakan aplikasi bantu dan website.
+>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ---
 
 **Credit:**  
