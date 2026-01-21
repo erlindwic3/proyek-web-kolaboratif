@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # Laporan Proyek Kelompok: Mini Simulasi Sistem Operasi
 
 ---
@@ -27,9 +26,49 @@ Topik: [Manajemen File dan Permission di Linux]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 =======
 # Laporan Proyek Kelompok: Mini Simulasi Sistem Operasi
+=======
+# Tugas Praktikum Minggu 15  
+Topik: Proyek Kelompok – Mini Simulasi Sistem Operasi (Scheduling + Memory + Container)
+
+---
+- **Nama Anggota Kelompok:**  
+1. Erlin Dwi Cahyanti   (250202911)
+2. Ani Ngismatul Hawa   (250202914)
+3. Aster Rifani         (250202915)
+4. Dyah Retno Wulandari (250202934)
+5. Lutfi Khoerunnisa    (250202947)
+- **Kelas** : [1IKRB]
+
+## Laporan Proyek Kelompok: Mini Simulasi Sistem Operasi ##
+# 1. Pendahuluan
+**A.	Latar Belakang**
+
+  Sistem Operasi (Operating System) memiliki peran penting dalam mengelola sumber daya komputer seperti CPU, memori, dan proses. Pada proyek ini dilakukan simulasi dua konsep utama Sistem Operasi, yaitu:
+
+- CPU Scheduling (FCFS dan SJF)
+- Page Replacement (FIFO dan LRU)
+
+Simulasi dibuat menggunakan bahasa pemrograman Java berbasis terminal dan dijalankan di dalam Docker untuk memastikan environment yang reproducible. Proyek dikerjakan menggunakan Git kolaboratif dengan pembagian branch per fitur. Mini Simulasi Sistem Operasi merupakan studi komprehensif yang mengintegrasikan tiga pilar utama infrastruktur TI modern. 
+1. Pertama, Manajemen Memori melalui perbandingan algoritma FIFO dan LRU untuk mengoptimalkan efisiensi page replacement . 
+2. Kedua, Scheduling yang mengatur antrean proses agar sistem berjalan responsif. 
+3. Ketiga, Containerization (Docker) yang digunakan untuk mensimulasikan limitasi sumber daya CPU dan RAM secara nyata, memastikan aplikasi berjalan stabil di lingkungan terisolasi tanpa mengganggu host utama.
 
 ---
 
+## B. Tujuan
+Tujuan dari proyek ini, berdasarkan panduan praktikum, adalah sebagai berikut:
+1.	Bekerja dalam tim: Kemampuan berkolaborasi dalam kelompok dengan pembagian tugas yang jelas antara peran Lead, Developer, dan QA.
+2.	Menggabungkan konsep: Mampu mengintegrasikan setidaknya dua konsep inti dari Sistem Operasi (misalnya pengaturan CPU dan penggantian halaman memori) ke dalam satu program yang sama.
+3.	Mengelola kode: Menggunakan Git untuk mengelola kode dengan baik, termasuk pembuatan dan penggabungan branch secara rapi.
+4.	Memastikan aplikasi bisa dijalankan: Menggunakan Docker agar aplikasi dapat dijalankan dengan lancar di berbagai lingkungan.
+5.	Membuat dokumentasi dan presentasi: Membuat dokumentasi yang terstruktur serta menyampaikan hasil pengujian aplikasi melalui presentasi yang jelas.
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
+
+---
+# 2. Arsitektur Aplikasi
+**A. Desain Arsitektur Umum**
+
+<<<<<<< HEAD
 ## Nama Kelompok
 
 - **Nama Anggota Kelompok:**
@@ -40,7 +79,7 @@ Topik: [Manajemen File dan Permission di Linux]
 4. Dyah Retno Wulandari (250202934)
 5. Lutfi Khoerunnisa (250202947)
 
->>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
+>>>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 - **Kelas** : [1IKRB]
 
 ---
@@ -153,9 +192,13 @@ Tuliskan tujuan praktikum minggu ini.
 > Menjelaskan hasil output dari perintah Linux dasar.
 > Menyusun laporan praktikum dengan struktur yang benar.
 > Mengunggah dokumentasi hasil ke Git Repository tepat waktu.
+=======
+  Arsitektur umum Mini Simulasi Sistem Operasi ini dibangun di atas tiga lapisan integrasi yang menghubungkan logika algoritma dengan lingkungan eksekusi modern. Pada lapisan inti, Logika Manajemen Memori dan Penjadwalan berfungsi sebagai otak sistem yang memproses antrean data menggunakan algoritma seperti FIFO atau LRU serta mengatur prioritas tugas. Logika ini kemudian dibungkus dalam Lapisan Kontainerisasi (Docker), yang bertindak sebagai lingkungan terisolasi untuk mengatur batas penggunaan sumber daya fisik, seperti membatasi kapasitas CPU dan RAM agar simulasi tidak mengonsumsi seluruh daya host.
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
----
+  Aliran datanya dimulai dari input proses yang dijadwalkan oleh unit scheduling, lalu dialokasikan ke unit memory management untuk dipetakan ke dalam slot memori yang tersedia, sementara seluruh aktivitas tersebut dipantau secara real-time melalui metrik performa kontainer.
 
+<<<<<<< HEAD
 ## Dasar Teori
 1. File tersebut adalah File Biasa (-) yang memiliki konfigurasi hak akses yang ketat bagi pengguna selain pemilik. Secara spesifik:
 Pemilik (Owner) memiliki hak penuh (rwx): Mereka dapat Membaca, Menulis/Mengubah, dan Mengeksekusi file.
@@ -163,8 +206,75 @@ Pemilik (Owner) memiliki hak penuh (rwx): Mereka dapat Membaca, Menulis/Mengubah
 3. Secara keseluruhan, permission ini sering digunakan untuk file yang dapat dieksekusi (seperti skrip atau program) yang boleh dibaca dan dijalankan oleh anggota grup, tetapi hanya boleh dimodifikasi oleh pemiliknya.
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 =======
+=======
+**B. Deskripsi Modul**
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
----
+  Aplikasi simulasi Sistem Operasi ini dibagi menjadi beberapa modul terpisah untuk menjaga struktur kode tetap rapi, mudah dipahami, dan mudah dikembangkan. Setiap modul merepresentasikan satu konsep atau fungsi utama dalam Sistem Operasi.
+
+2.1 Modul CPU Scheduling
+
+
+| Komponen   | Keterangan                                                                            |
+| ---------- | ------------------------------------------------------------------------------------- |
+| Nama Modul | Scheduling                                                                            |
+| File Utama | FCFS.java, SJF.java, Process.java                                                     |
+| Deskripsi  | Mensimulasikan penjadwalan proses pada CPU                                            |
+| Algoritma  | 1. First Come First Serve (FCFS). 2. Shortest Job First (SJF-non-preemptiva)          |
+| Input      | Data set proses (PID, Arrival Time, Burst Time)                                       |
+| Output     | 1. Tabel hasil metrik per proses. 2. Ringkasan metrik (Avg Waiting & Turnaround Time) |
+
+Fungsi Utama:
+
+  - Membaca data proses dari file process.csv
+  - Mengurutkan proses sesuai algoritma yang dipilih
+  Menghitung: Waiting Time Turnaround Time Rata-rata Waiting Time Menampilkan hasil dalam bentuk tabel ASCII di terminal
+
+  Input: Dataset proses (PID, Arrival Time, Burst Time)
+
+  Output: Tabel hasil per proses Ringkasan metrik penjadwalan
+
+2.2 Modul Page Replacement
+
+  Nama Modul: paging 
+  File Utama: FIFO.java, LRU.java
+
+Deskripsi: 
+  Modul Page Replacement digunakan untuk mensimulasikan penggantian halaman pada memori utama dengan algoritma FIFO (First In First Out) dan LRU (Least Recently Used).
+
+| Komponen   | Keterangan                                                                          |
+| ---------- | ----------------------------------------------------------------------------------- |
+| Nama Modul | paging                                                                              |
+| File Utama | "FIFO.java, LRU.java"                                                               |
+| Deskripsi  | Mensimulasikan penggantian halaman pada memori utama (Virtual Memory)               |
+| Algoritma  | 1. First-In First-Out (FIFO). 2. Least Recently Used (LRU)                          |
+| Input      | 1. Jumlah Frame (Input CLI). 2. Dataset referensi halaman (pages.txt)               |
+| Output     | "1. Tabel status Hit/Fault per referensi. 2. Ringkasan (Total Fault, Fault Rate %)" |
+
+Fungsi Utama:
+  - Membaca urutan referensi halaman dari file pages.txt
+  - Menerima input jumlah frame dari pengguna melalui CLI
+  - Menentukan page hit dan page fault
+  - Menghitung fault rate
+
+  Input:
+  - Jumlah frame
+  - Dataset referensi halaman
+  Output:
+  - Total page reference
+  - Jumlah page fault
+  - Jumlah page hit
+  - Fault rate (%)
+
+  ## Alur Data
+
+Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari input pengguna hingga pemantauan sistem, yang dapat dijelaskan dalam empat tahap utama:
+
+  1. Input & Penjadwalan (Scheduling): Data atau proses masuk ke dalam sistem dan diatur urutan eksekusinya oleh unit scheduling. Di sini, sistem menentukan kapan sebuah proses mendapatkan giliran untuk diproses oleh CPU.
+  2. Alokasi Memori (Memory Management): Setelah proses dijadwalkan, sistem akan mengakses data di memori. Pada tahap ini, algoritma FIFO atau LRU bekerja untuk memutuskan data mana yang harus tetap berada di 3 slot frame dan data mana yang harus diganti jika terjadi page fault .
+  3. Eksekusi Terisolasi (Containerization): Seluruh proses komputasi ini berjalan di dalam Kontainer Docker. Docker memastikan bahwa simulasi hanya menggunakan sumber daya sesuai limit yang ditentukan, misalnya CPU maksimal 50% dan RAM 256 MiB.
+
+  4. Monitoring & Output: Hasil akhir berupa jumlah fault dan hit ditampilkan sebagai output, sementara beban kerja sistem dipantau secara real-time melalui metrik performa (CPU/RAM Usage) untuk memvalidasi stabilitas arsitektur.
 
 ## 2. Arsitektur Aplikasi
 
@@ -257,6 +367,7 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
 ## Langkah Praktikum
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 
@@ -277,6 +388,22 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
 6. Simulasi Page Replacement: Menjalankan algoritma FIFO dengan kapasitas 3 frame yang menghasilkan total 9 Page Faults.
 
 7. Dokumentasi Hasil: Mengambil screenshot seluruh hasil eksekusi terminal dan menyusunnya ke dalam laporan praktikum akhir.
+=======
+
+  1. Inisialisasi Proyek: Membuat struktur folder kerja dan menyiapkan file sumber Java (MainApp, Process, FCFS, FIFO).
+
+  2. Persiapan Data: Menyusun file proses.csv di dalam folder data sebagai input otomatis untuk simulasi penjadwalan CPU.
+
+  3. Konfigurasi Docker: Membuat Dockerfile dan melakukan build image mini-os-kelompok menggunakan basis JDK 17.
+
+  4. Penanganan Error: Mengatasi kendala INTERNAL_ERROR pada Docker dengan melakukan restart layanan dan pembersihan cache.
+
+  5. Simulasi CPU Scheduling: Menjalankan program untuk menghitung algoritma FCFS dan menghasilkan Average Waiting Time sebesar 6.33.
+
+  6. Simulasi Page Replacement: Menjalankan algoritma FIFO dengan kapasitas 3 frame yang menghasilkan total 9 Page Faults.
+
+  7. Dokumentasi Hasil: Mengambil screenshot seluruh hasil eksekusi terminal dan menyusunnya ke dalam laporan praktikum akhir.
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
 ---
 
@@ -285,15 +412,19 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
 ## A. Output Modudl Secheduling (FCFS)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 | PID | Arrival | Burst | Finish | TAT | WT |
 |---|---|---|---|---|---|
 =======
+=======
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 =================================================================
 | PID | Arrival | Burst | Finish | TAT | WT |
 
 ---
 
+<<<<<<< HEAD
 >>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 | P1 | 0 | 10 | 10 | 10 | 0 |
 | P2 | 2 | 5 | 15 | 13 | 8 |
@@ -304,6 +435,15 @@ Alur data dalam Mini Simulasi Sistem Operasi ini bergerak secara linier dari inp
 =======
 =================================================================
 >>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
+=======
+| P1 | 0 | 10 | 10 | 10 | 0 |
+
+| P2 | 2 | 5 | 15 | 13 | 8 |
+
+| P3 | 4 | 8 | 23 | 19 | 11 |
+
+=================================================================
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 Ringkasan Metrik:
 
 - Rata-rata Turnaround Time (Avg TAT): 14.00
@@ -311,6 +451,7 @@ Ringkasan Metrik:
 
 # B. Output Modul Page Replacement (FIFO):
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 | Ref Halaman | Status | Isi Frame |
 |--|--|--|
@@ -328,11 +469,26 @@ Ringkasan Metrik:
 =====================================================================
 
 >>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
+=======
+## | Ref Halaman | Status | Isi Frame |
+
+| 7 | FAULT | [7] |
+
+| 0 | FAULT | [7, 0] |
+
+| 1 | FAULT | [7, 0, 1] |
+
+| 2 | FAULT | [0, 1, 2] |
+
+=====================================================================
+
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 - Total Page Fault : 4
 - Fault Rate (%) : 100.00% (pada 4 referensi pertama)
 
 ## 4. Analisis
 
+<<<<<<< HEAD
 Makna Hasil: Hasil menunjukkan bagaimana algoritma penjadwalan mempengaruhi efisiensi waktu tunggu proses. Pada FCFS, proses yang datang lebih awal namun memiliki burst time besar dapat menyebabkan convoy effect. Pada modul paging, penambahan jumlah frame terbukti dapat menurunkan fault rate.
 
 Hubungan dengan Teori: Program ini mensimulasikan fungsi Kernel dalam memanajemen sumber daya. System call disimulasikan melalui input/output yang berinteraksi dengan dataset. Penggunaan Docker mencerminkan konsep Resource Isolation pada sistem operasi modern.
@@ -354,6 +510,31 @@ Integrasi modul sistem operasi berhasil dilakukan dengan Java, membuktikan bahwa
 Penggunaan Docker menjamin aplikasi bersifat portable dan reproducible, memudahkan kolaborasi antar anggota kelompok yang menggunakan sistem operasi berbeda.
 
 Penggunaan Git dengan fitur branching mempermudah pembagian tugas antara pengembang modul scheduling dan paging tanpa menyebabkan konflik kode.
+=======
+  Makna Hasil: Hasil menunjukkan bagaimana algoritma penjadwalan mempengaruhi efisiensi waktu tunggu proses. Pada FCFS, proses yang datang lebih awal namun memiliki burst time besar dapat menyebabkan convoy effect. Pada modul paging, penambahan jumlah frame terbukti dapat menurunkan fault rate.
+
+  Hubungan dengan Teori: Program ini mensimulasikan fungsi Kernel dalam memanajemen sumber daya. System call disimulasikan melalui input/output yang berinteraksi dengan dataset. Penggunaan Docker mencerminkan konsep Resource Isolation pada sistem operasi modern.
+
+  Perbedaan Linux vs Windows: Melalui Docker, perbedaan OS host menjadi tidak relevan karena aplikasi berjalan di atas kernel Linux yang sama di dalam kontainer, memastikan konsistensi hasil perhitungan metrik di laptop seluruh anggota kelompok
+
+## 5. Jawaban Quiz
+1. Tantangan terbesar integrasi modul apa, dan bagaimana solusinya?
+   Jawab: Tantangan terbesar adalah sinkronisasi format dataset yang berbeda (CSV untuk scheduling dan TXT untuk paging). Solusinya adalah membangun kelas Parser yang modular di Java untuk memisahkan logika pembacaan file dengan logika algoritma.
+
+2. Mengapa Docker membantu proses demo dan penilaian proyek?
+ Jawab: Karena Docker mengeliminasi masalah "it works on my machine". Asisten dosen tidak perlu menginstal Java JDK versi tertentu; cukup menjalankan perintah docker run, dan seluruh lingkungan (env) sudah siap.
+
+3. Jika dataset diperbesar 10x, modul mana yang paling terdampak performanya? Jelaskan. 
+  Jawab: Modul Page Replacement (Paging). Hal ini dikarenakan setiap kali ada referensi halaman baru, sistem harus melakukan iterasi pencarian di dalam memori (frame) dan mengelola struktur data (Queue/List) untuk penggantian. Dengan dataset 10x lebih besar, frekuensi operasi tulis-baca pada memori virtual meningkat secara eksponensial.
+
+## 6. Kesimpulan
+
+  1. Integrasi modul sistem operasi berhasil dilakukan dengan Java, membuktikan bahwa logika manajemen memori dan penjadwalan dapat bekerja berdampingan dalam satu aplikasi.
+
+  2. Penggunaan Docker menjamin aplikasi bersifat portable dan reproducible, memudahkan kolaborasi antar anggota kelompok yang menggunakan sistem operasi berbeda.
+
+  3. Penggunaan Git dengan fitur branching mempermudah pembagian tugas antara pengembang modul scheduling dan paging tanpa menyebabkan konflik kode.
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
 ## 7. Langkah Praktikum (Perintah Docker)
 
@@ -385,9 +566,11 @@ docker run -it mini-os-kelompok
 Refleksi Diri:
 Bagian paling menantang adalah melakukan konfigurasi Dockerfile agar dapat melakukan compile Java secara otomatis. Cara mengatasinya adalah dengan menggunakan base image openjdk-slim dan melakukan riset pada dokumentasi resmi Docker.
 
----
-
+```bash
+docker run -it mini-os-kelompok
+```
 ## Hasil Eksekusi
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -433,6 +616,24 @@ Sertakan screenshot hasil percobaan atau diagram:
 >>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
 ## Pembagian Tugas
 
+=======
+
+1. Hasil Docker
+
+  ![Screenshot hasil](./screenshots/.png)
+
+2. Hasil Simulasi
+
+   ![Screenshot hasil](./screenshots/.png)
+
+3. Tabel Perhitungan CPU Secheduling
+
+   ![Screenshot hasil](./screenshots/.png)
+   
+---
+
+
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 | Nama                 |    NIM    |    Peran tugas |
 | :------------------- | :-------: | -------------: |
 | Erlin Dwi Cahyanti   | 250202911 | Project Leader |
@@ -441,6 +642,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 | Lutfi Khoerunnisa    | 250202947 |  Dokumentasi 1 |
 | Aster Rifani         | 250202915 |  Dokumentasi 2 |
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 | Nomer | Perintah| Makna Hasil |
@@ -494,6 +696,8 @@ Tuliskan secara singkat:
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 =======
 >>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
+=======
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 ---
 
 **Credit:**  

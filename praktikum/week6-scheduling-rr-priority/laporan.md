@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,10 +13,14 @@ Topik: [Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling]
 Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling
 
 >>>>>>> 4a10d10cc8320ad9a7866e6d4ecbc1d4ce45b3ae
+=======
+# Tugas Praktikum Minggu 6  
+Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling  
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
 ---
-
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani 
@@ -68,6 +73,168 @@ Tuliskan tujuan praktikum minggu ini.
 <<<<<<< HEAD
 <<<<<<< HEAD
    ***Penjadwalan CPU (CPU Scheduling)*** adalah salah satu fungsi utama dalam sistem operasi yang bertujuan untuk menentukan proses mana yang akan mendapatkan alokasi waktu CPU pada saat tertentu. Karena hanya satu proses yang dapat menggunakan CPU pada suatu waktu, maka sistem operasi perlu mengatur proses-proses yang sedang menunggu agar dapat dieksekusi secara efisien dan adil.
+=======
+- **Nama**  : [Dyah Retno Wulandari]  
+- **NIM**   : [250202934]  
+- **Kelas** : [1IKRB]
+
+
+## A. Deskripsi Singkat
+Pada praktikum minggu ini, mahasiswa akan mempelajari **dua algoritma lanjutan penjadwalan CPU**, yaitu:
+- **Round Robin (RR)**  
+- **Priority Scheduling**
+
+Kedua algoritma ini banyak digunakan pada sistem modern karena mempertimbangkan **keadilan waktu eksekusi (time quantum)** dan **tingkat prioritas proses**.  
+Mahasiswa akan melakukan simulasi perhitungan manual untuk menghitung *waiting time* dan *turnaround time*, serta menganalisis efek perbedaan *time quantum* dan prioritas terhadap performa CPU scheduling.
+
+---
+
+## B. Tujuan
+Setelah menyelesaikan tugas ini, mahasiswa mampu:
+1. Menghitung *waiting time* dan *turnaround time* pada algoritma RR dan Priority.  
+2. Menyusun tabel hasil perhitungan dengan benar dan sistematis.  
+3. Membandingkan performa algoritma RR dan Priority.  
+4. Menjelaskan pengaruh *time quantum* dan prioritas terhadap keadilan eksekusi proses.  
+5. Menarik kesimpulan mengenai efisiensi dan keadilan kedua algoritma.  
+
+---
+
+## C. Langkah Pengerjaan
+1. **Siapkan Data Proses**
+   Gunakan contoh data berikut (boleh dimodifikasi sesuai kebutuhan):
+   | Proses | Burst Time | Arrival Time | Priority |
+   |:--:|:--:|:--:|:--:|
+   | P1 | 5 | 0 | 2 |
+   | P2 | 3 | 1 | 1 |
+   | P3 | 8 | 2 | 4 |
+   | P4 | 6 | 3 | 3 |
+
+2. **Eksperimen 1 – Round Robin (RR)**
+   - Gunakan *time quantum (q)* = 3.  
+   - Hitung *waiting time* dan *turnaround time* untuk tiap proses.  
+   - Simulasikan eksekusi menggunakan Gantt Chart (manual atau spreadsheet).  
+     ```
+     | P1 | P2 | P3 | P4 | P1 | P3 | ...
+     0    3    6    9   12   15   18  ...
+     ```
+   - Catat sisa *burst time* tiap putaran.
+
+   Hasil Eksperimen 1
+    ![Screenshot hasil](screenshots/Eksperimen1_RR.png)
+
+    Gantt Chart Round Robin (q=3)
+     ```
+     | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
+     0    3    6    9    12   14   17   20   22 
+     ```
+
+     Catatan Eksekusi sisa *burst time* tiap putaran :
+
+      P1 = 5-3 = sisa 2
+      
+      P2 = 3-3 = sisa 0 (selesai)
+
+      P3 = 8-3 = sisa 5
+
+      P4 = 6-3 = sisa 3
+
+      P1 = 2 (selesai)
+
+      P3 = 5-3 = sisa 2
+
+      P4 = 3-3 = sisa 0 (selesai)
+
+      P3 = 2 (selesai)
+
+3. **Eksperimen 2 – Priority Scheduling (Non-Preemptive)**
+   - Urutkan proses berdasarkan nilai prioritas (angka kecil = prioritas tinggi).  
+   - Lakukan perhitungan manual untuk:
+     ```
+     WT[i] = waktu mulai eksekusi - Arrival[i]
+     TAT[i] = WT[i] + Burst[i]
+     ```
+   - Buat tabel perbandingan hasil RR dan Priority.
+
+Hasil Eksperimen 2 
+
+Gantt Chart :
+
+      | P1 | P2 | P4 | P3 | 
+      0    5    8   14    22
+
+  WT[i] = waktu mulai eksekusi - Arrival[i]
+
+   P1 = 0 - 0 = 0
+
+   P2 = 5 - 1 = 4
+
+   P3 = 14 - 2 = 12
+
+   P4 = 8 - 3 = 5
+
+   P1+P2+P3+P4 = 0 + 4 + 12 + 22 = 38
+
+  TAT[i] = WT[i] + Burst[i]
+
+   P1 = 0 + 5 = 5
+
+   P2 = 4 + 3 = 7
+
+   P3 = 12 + 8 = 20
+
+   P4 = 5 + 6 = 11
+
+   P1+P2+P3+P4 = 5 + 7 + 20 + 11 = 43
+   
+
+4. **Eksperimen 3 – Analisis Variasi Time Quantum (Opsional)**
+   - Ubah *quantum* menjadi 2 dan 5.  
+   - Amati perubahan nilai rata-rata *waiting time* dan *turnaround time*.  
+   - Buat tabel perbandingan efek *quantum*.
+
+Eksperimen 3 (quantum = 2)
+   ![Screenshot hasil](screenshots/Eksperimen3_q2.png)
+
+   Gantt Chart:
+
+       | P1 | P2 | P3 | P1 | P4 | P2 | P3 | P1 | P4 | P3 | P4 | P3 |
+       0    2    4    6    8   10   11   13   14   16   18   20   22
+
+Eksperimen 3 (quantum = 5)
+    ![Screenshot hasil](screenshots/Eksperimen3_q5.png)
+
+    Gantt Chart :
+
+      | P1 | P2 | P3 | P4 | P3 | P4 | 
+       0    5    8   13   18   21   22  
+
+Tabel perbandingan efek quantum
+
+   | Quantum | Avg Waiting Time | Avg Turnaround Time
+   |------------|------------------|----------------------
+   | q = 2 | 9,75 | 15,25
+   | q = 3 | 8,5 | 14
+   | q = 5 | 7 | 12,5 
+
+5. **Eksperimen 4 – Dokumentasi**
+   - Simpan semua hasil tabel dan screenshot ke:
+     ```
+     praktikum/week6-scheduling-rr-priority/screenshots/
+     ```
+   - Buat tabel perbandingan seperti berikut:
+
+     | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+     |------------|------------------|----------------------|------------|-------------|
+     | RR | 8,5 | 14 | Adil terhadap semua proses | Tidak efisien jika quantum tidak tepat |
+     | Priority | 9,5 | 10,75 | Efisien untuk proses penting | Potensi *starvation* pada prioritas rendah |
+
+6. **Commit & Push**
+   ```bash
+   git add .
+   git commit -m "Minggu 6 - CPU Scheduling RR & Priority"
+   git push origin main
+   ```
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
    ***Round Robin (RR)*** merupakan salah satu algoritma penjadwalan yang paling umum digunakan dalam sistem time-sharing atau multitasking. Prinsip dasar algoritma ini adalah memberikan setiap proses jatah waktu eksekusi yang sama, yang disebut *time quantum*.
 
@@ -81,6 +248,7 @@ Tuliskan tujuan praktikum minggu ini.
 3. Mekanisme Priority Scheduling (Starvation dan Aging): Priority Scheduling mengalokasikan CPU ke proses dengan prioritas tertinggi. Prioritas ini dapat bersifat statis atau dinamis. Masalah signifikan dari algoritma ini adalah starvation, yaitu proses dengan prioritas rendah mungkin tidak pernah mendapatkan CPU jika terus-menerus ada proses prioritas tinggi yang masuk. Solusi umum untuk mengatasi starvation adalah Aging, di mana prioritas proses yang telah menunggu lama dalam sistem secara bertahap ditingkatkan.
 ---
 
+<<<<<<< HEAD
 ## Langkah Praktikum
 <<<<<<< HEAD
 1. **Menyiapkan Data Proses**
@@ -438,3 +606,80 @@ mengatasi dengan mempelajari dengan cermat.
 
 **Credit:**  
 _Template laporan praktikum Sistem Operasi (SO-202501) – Universitas Putra Bangsa_
+=======
+## D. Tugas & Quiz
+### Tugas
+1. Hitung *waiting time* dan *turnaround time* untuk algoritma RR dan Priority. 
+
+   Jawab : 
+
+   Round Robin (q=3) : 
+
+   WT = P1+P2+P3+P4 = 9+2+11+12= 34
+
+   TAT = P1+P2+P3+P4 = 14+5+20+17= 56
+
+   Priority Scheduling :
+
+   WT = P1+P2+P3+P4 = 0+4+12+22= 38
+
+   TAT = P1+P2+P3+P4= 5+7+20+11= 43
+
+
+2. Sajikan hasil perhitungan dan Gantt Chart dalam `laporan.md`.  
+3. Bandingkan performa dan jelaskan pengaruh *time quantum* serta prioritas. 
+
+   Jawab : 
+   Performa priority lebih cepat karena proses dupilih berdasarkan prioritas dan hasil WT dan TAT jauh lebih kecil dibanding RR. Sedangkan performa Round Robin lebih adil karena semua proses mendapat jatah CPU secara bergilir.
+
+   Pengaruh time quantum apabila time quantum kecil overhead tinggi karena waiting timenya cenderung besar, sedangkan time quantum besar WT dan TAT membaik, tetapi fairness menurun. Dapat disimpulkan : 
+
+   Quantum kecil = responsivitas tinggi tetapi waiting time lebih buruk
+
+   Quantum besar = perfoma batch lebih baik tetapi fairness menurun.
+
+   Pengaruh penggunaan priority yaitu proses prioritas tinggi selesai lebih cepat meskipun datang terakhir.
+
+4. Simpan semua bukti (tabel, grafik, atau gambar) ke folder `screenshots/`.  
+
+### Quiz
+Tuliskan jawaban di bagian **Quiz** pada laporan:
+1. Apa perbedaan utama antara Round Robin dan Priority Scheduling? 
+
+   Jawab : 
+- Round Robin (RR): Menggunakan konsep time-sharing dengan memberikan waktu eksekusi yang sama (time slice) secara bergantian ke setiap proses, tanpa memandang prioritas.
+- Priority Scheduling: Proses dengan prioritas tertinggi dieksekusi terlebih dahulu, tanpa menggunakan time slice, dan proses dengan prioritas rendah mungkin memiliki waktu tunggu yang lebih lama.
+
+2. Apa pengaruh besar/kecilnya *time quantum* terhadap performa sistem?  
+  
+   Jawab: 
+
+    **Time Quantum Besar:**
+   
+   - Mengurangi overhead switching konteks: Proses memiliki waktu lebih lama untuk dieksekusi sebelum digantikan oleh proses lain, sehingga mengurangi jumlah switching konteks.
+   -  Meningkatkan throughput: Proses dapat menyelesaikan tugasnya lebih cepat karena memiliki waktu lebih lama untuk dieksekusi.
+   - Mengurangi responsifitas: Proses lain harus menunggu lebih lama untuk mendapatkan giliran, sehingga responsifitas sistem menurun.
+
+   **Time Quantum Kecil:**
+   - Meningkatkan responsifitas: Proses lain dapat mendapatkan giliran lebih cepat, sehingga responsifitas sistem meningkat.
+   - Meningkatkan overhead switching konteks: Proses harus sering digantikan oleh proses lain, sehingga meningkatkan jumlah switching konteks dan overhead.
+   - Mengurangi throughput: Proses memiliki waktu lebih singkat untuk dieksekusi, sehingga throughput sistem menurun.
+
+3. Mengapa algoritma Priority dapat menyebabkan *starvation*?  
+   Jawab : Karena proses dengan prioritas rendah mungkin tidak pernah mendapatkan kesempatan untuk dieksekusi jika ada proses lain dengan prioritas yang lebih tinggi yang terus-menerus masuk ke dalam antrian, sehingga proses dengan prioritas rendah diabaikan dan tidak dapat menyelesaikan tugasnya.
+---
+
+## E. Output yang Diharapkan
+- Hasil perhitungan dan analisis dimasukkan ke `laporan.md`.  
+- Screenshot tabel atau Gantt Chart disimpan di folder `screenshots/`.  
+- Laporan lengkap berada di `laporan.md`.  
+- Semua hasil telah di-*commit* ke GitHub tepat waktu.  
+
+---
+
+## F. Referensi
+1. Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. *Operating System Concepts*, 10th Edition, Wiley, 2018.  
+2. Andrew S. Tanenbaum, Herbert Bos. *Modern Operating Systems*, 4th Edition, Pearson, 2015.  
+3. OSTEP – *Operating Systems: Three Easy Pieces*, 2018.  
+4. Linux Manual Pages – *Scheduling & Process Control*.  
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a

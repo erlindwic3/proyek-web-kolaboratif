@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 # Laporan Praktikum Minggu 10
@@ -7,10 +8,14 @@ Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
 # Laporan Praktikum Minggu [10]
 Topik: ["Manajemen Memori – Page Replacement (FIFO & LRU)"]
 >>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
+=======
+# Tugas Praktikum Minggu 10  
+Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
 ---
-
 ## Identitas
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Nama**  : Aster Rifani  
 - **NIM**   : 250202915  
@@ -229,6 +234,38 @@ Analisis algoritma mana yang lebih efisien dan alasannya.
 Tuliskan potongan kode atau perintah utama:
 <<<<<<< HEAD
 ```bash
+=======
+- **Nama**  : [Dyah Retno Wulandari]  
+- **NIM**   : [250202934]  
+- **Kelas** : [1IKRB]
+
+
+## A. Deskripsi Singkat
+Pada praktikum minggu ini, mahasiswa akan mempelajari **manajemen memori virtual**, khususnya mekanisme **page replacement**.  
+Fokus utama praktikum adalah memahami bagaimana sistem operasi mengganti halaman (*page*) di memori utama ketika terjadi *page fault*, serta membandingkan performa algoritma **FIFO (First-In First-Out)** dan **LRU (Least Recently Used)**.
+
+Mahasiswa akan mengimplementasikan **program simulasi page replacement**, menjalankan dataset uji, dan menyajikan hasil dalam bentuk tabel atau grafik.
+
+---
+
+## B. Tujuan
+Setelah menyelesaikan tugas ini, mahasiswa mampu:
+1. Mengimplementasikan algoritma page replacement FIFO dalam program.
+2. Mengimplementasikan algoritma page replacement LRU dalam program.
+3. Menjalankan simulasi page replacement dengan dataset tertentu.
+4. Membandingkan performa FIFO dan LRU berdasarkan jumlah *page fault*.
+5. Menyajikan hasil simulasi dalam laporan yang sistematis.
+
+---
+
+## C. Ketentuan Teknis
+- Bahasa pemrograman **bebas** (Python / C / Java / lainnya).
+- Program berbasis **terminal** (tidak wajib GUI).
+- Fokus penilaian pada **logika algoritma dan keakuratan hasil simulasi**.
+
+Struktur folder (sesuaikan dengan template repo):
+```
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 praktikum/week10-page-replacement/
 ├─ code/
 │  ├─ page_replacement.*
@@ -265,6 +302,7 @@ Gunakan reference string berikut sebagai contoh:
 |LRU|	...|	...|
 ---
 
+<<<<<<< HEAD
 ## Hasil Eksekusi
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -316,6 +354,155 @@ Sertakan screenshot hasil percobaan atau diagram:
       | 12 | 3    | Hit     | 0       | 2       | 3       |
       | 13 | 2    | Hit     | 0       | 2       | 3       |
       Total Page Fault FIFO : 10
+=======
+## D. Langkah Pengerjaan
+1. **Menyiapkan Dataset**
+
+   Gunakan *reference string* berikut sebagai contoh:
+   ```
+   7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2
+   ```
+   Jumlah frame memori: **3 frame**.
+
+2. **Implementasi FIFO**
+
+   - Simulasikan penggantian halaman menggunakan algoritma FIFO.
+   - Catat setiap *page hit* dan *page fault*.
+   - Hitung total *page fault*.
+
+3. **Implementasi LRU**
+
+   - Simulasikan penggantian halaman menggunakan algoritma LRU.
+   - Catat setiap *page hit* dan *page fault*.
+   - Hitung total *page fault*.
+
+4. **Eksekusi & Validasi**
+
+   - Jalankan program untuk FIFO dan LRU.
+   - Pastikan hasil simulasi logis dan konsisten.
+   - Simpan screenshot hasil eksekusi.
+
+   Alur program
+
+            import java.util.*;
+
+            public class page_replacement {
+
+         static int[] reference = {7,0,1,2,0,3,0,4,2,3,0,3,2};
+         static int frameSize = 3;
+
+         public static void main(String[] args) {
+            fifo();
+            System.out.println("\n-----------------------------\n");
+            lru();
+         }
+
+         // ================= FIFO =================
+         static void fifo() {
+            Set<Integer> frames = new HashSet<>();
+            Queue<Integer> queue = new LinkedList<>();
+            int fault = 0;
+
+        System.out.println("FIFO Page Replacement\n");
+
+        for (int page : reference) {
+            if (!frames.contains(page)) {
+                fault++;
+
+                if (frames.size() == frameSize) {
+                    int removed = queue.poll();
+                    frames.remove(removed);
+                }
+
+                frames.add(page);
+                queue.add(page);
+                System.out.println("Page " + page + " => FAULT " + frames);
+            } else {
+                System.out.println("Page " + page + " => HIT   " + frames);
+            }
+        }
+
+        System.out.println("\nTotal Page Fault FIFO: " + fault);
+         }
+
+         // ================= LRU =================
+         static void lru() {
+        List<Integer> frames = new ArrayList<>();
+        int fault = 0;
+
+        System.out.println("LRU Page Replacement\n");
+
+        for (int page : reference) {
+            if (!frames.contains(page)) {
+                fault++;
+
+                if (frames.size() == frameSize) {
+                    frames.remove(0); // hapus paling lama dipakai
+                }
+            } else {
+                frames.remove((Integer) page);
+            }
+
+            frames.add(page);
+            System.out.println("Page " + page + " => " +
+                    (frames.contains(page) && frames.size() <= frameSize ? "HIT   " : "FAULT ") + frames);
+        }
+
+        System.out.println("\nTotal Page Fault LRU: " + fault);
+         }
+         
+         
+      ![Hasil Simulasi](screenshots/hasil_simulasi.png)
+
+
+
+5. **Analisis Perbandingan**
+
+   Buat tabel perbandingan seperti berikut:
+
+   | Algoritma | Jumlah Page Fault | Keterangan |
+   |:--|:--:|:--|
+   | FIFO | 10 | Tidak mempertimbangkan pola penggunaan halaman sehingga halaman yang sering dipake harus diganti lebih awal |
+   | LRU | 9 | Mempertimbangkan halaman yang paling lama tidak digunakan, sehingga penggunaan halaman lebih efisien |
+
+
+   - Jelaskan mengapa jumlah *page fault* bisa berbeda.
+
+   Jawab: Jumlah page fault bisa berbeda karena cara tiap algoritma menentukan halaman mana yang harus diganti saat memori penuh.
+   - Analisis algoritma mana yang lebih efisien dan alasannya.
+
+6. **Commit & Push**
+
+   ```bash
+   git add .
+   git commit -m "Minggu 10 - Page Replacement FIFO & LRU"
+   git push origin main
+   ```
+
+---
+
+## E. Tugas & Quiz
+### Tugas
+1. Buat program simulasi page replacement FIFO dan LRU.
+2. Jalankan simulasi dengan dataset uji.
+3. Sajikan hasil simulasi dalam tabel atau grafik.
+4. Tulis laporan praktikum pada `laporan.md`.
+
+### Quiz
+Jawab pada bagian **Quiz** di laporan:
+1. Apa perbedaan utama FIFO dan LRU?
+
+Jawab : 
+-	FIFO (First in First Out) waktu kedatangan halaman sederhana atau berdasarkan antrian, mengimplementasikannya mudah, kinerjanya buruk, dan akurasi terhadap perilaku program rendah
+-	LRO (Least Recently Used) Riwayat penggunaan halaman kompleks (waktu akses terakhir), mengimplementasikannya lebih sulit, kinerja umunya lebih baik dan akurasi terhadap perilaku program tinggi
+2. Mengapa FIFO dapat menghasilkan *Belady’s Anomaly*?
+
+Jawab : karena keputusan penggantian halaman hanya berdasarkan urutan kedatangan, bukan pada seberapa sering atau seberapa baru halaman tersebut digunakan serta sensitive terhadap perubahan jumlah frame.
+
+3. Mengapa LRU umumnya menghasilkan performa lebih baik dibanding FIFO?
+
+Jawab: Karena LRU mengikuti perilaku nyata program, menjaga halaman yang masih relevan, menghasilkan pengguna memori yang lebih efisien
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
 
    2. Tabel LRU
       | No | Page | Kondisi | Frame 1 | Frame 2 | Frame 3 |
@@ -356,6 +543,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 3. Algoritma LRU lebih efisien karena menggunakan prinsip lokalitas waktu, yaitu mengganti halaman yang sudah paling lama tidak digunakan berdasarkan riwayat akses nyata. Dalam simulasi Anda, strategi ini berhasil menekan angka page fault menjadi 9 kali (lebih rendah dari FIFO yang 10 kali) karena mampu mempertahankan data yang masih aktif dibutuhkan oleh sistem.
 ---
 
+<<<<<<< HEAD
 ## Kesimpulan
 <<<<<<< HEAD
 Berdasarkan praktikum yang dilakukan, dapat disimpulkan bahwa mekanisme *page replacement* sangat berpengaruh terhadap kinerja manajemen memori virtual dalam sistem operasi. Algoritma FIFO mudah diimplementasikan namun dapat menghasilkan jumlah *page fault* yang lebih tinggi, sedangkan algoritma LRU cenderung lebih efisien karena mempertimbangkan riwayat penggunaan *page*. Dengan demikian, pemilihan algoritma *page replacement* yang tepat dapat meningkatkan efisiensi penggunaan memori dan performa sistem secara keseluruhan.
@@ -470,3 +658,18 @@ Membenarkan dan teliti.
 
 **Credit:**  
 _Template laporan praktikum Sistem Operasi (SO-202501) – Universitas Putra Bangsa_
+=======
+## F. Output yang Diharapkan
+- Kode program simulasi di folder `code/`.
+- Dataset uji di `code/reference_string.txt`.
+- Screenshot hasil simulasi di `screenshots/`.
+- Laporan lengkap di `laporan.md`.
+- Semua hasil telah di-*commit* ke GitHub.
+
+---
+
+## G. Referensi
+1. Silberschatz, A., Galvin, P., Gagne, G. *Operating System Concepts*, 10th Ed.
+2. Tanenbaum, A. *Modern Operating Systems*, 4th Ed.
+3. OSTEP – Virtual Memory & Page Replacement.
+>>>>>>> befbaf963505fb5abbac60c1e3be2a0e33e0857a
