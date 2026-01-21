@@ -227,6 +227,15 @@ Untuk bagian refleksi, Anda bisa menuliskan: "Bagian paling menantang adalah mel
 3. Tabel Perhitungan CPU Secheduling
    ![Screenshot hasil](./screenshots/TABEL%20PERHITUNGAN%20CPU%20SECHEDULING.png)
 
+4. Tabel Pembagian tugas
+Hasil Docker
+   ![Screenshot hasil](./screenshots/Tabel%20Pembagian%20Tugas.png)
+
+5. Tabel Kolaborasi Tim
+Hasil Docker
+   ![Screenshot hasil](./screenshots/Riwayat%20Commit%20dan%20Log%20Kolaborasi%20Tim.png)
+   
+
 ---
 
 ## Pembagian Tugas
