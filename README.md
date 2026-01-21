@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # proyek-web-kolaboratif
 =======
 # os-202501
