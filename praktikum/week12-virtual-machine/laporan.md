@@ -1,17 +1,27 @@
 
+<<<<<<< HEAD
 # Laporan Praktikum Minggu 12
+=======
+# Laporan Praktikum Minggu [12]
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 Topik: ["Virtualisasi Menggunakan Virtual Machine"]
 
 ---
 
 ## Identitas
+<<<<<<< HEAD
 - **Nama**  : [Aster Rifani] , [Lutfi Khoerunnisa] , [Ani Ngismatul Hawa]  
 - **NIM**   : [250202915] , [250202947] , [250202914]
+=======
+- **Nama**  : [Lutfi Khoerunnisa],  [Aster Rifani] , [Ani Ngismatul Hawa]
+- **NIM**   : [250202947]  , [250202915] , [250202914]
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 - **Kelas** : [1IKRB]
 
 ---
 
 ## Tujuan
+<<<<<<< HEAD
 > Menginstal perangkat lunak virtualisasi (VirtualBox/VMware).
 
 > Membuat dan menjalankan sistem operasi guest di dalam VM.  
@@ -21,6 +31,13 @@ Topik: ["Virtualisasi Menggunakan Virtual Machine"]
 > Menjelaskan mekanisme proteksi OS melalui virtualisasi.  
 
 > Menyusun laporan praktikum instalasi dan konfigurasi VM secara sistematis.
+=======
+1. Menginstal perangkat lunak virtualisasi (VirtualBox/VMware).
+2. Membuat dan menjalankan sistem operasi guest di dalam VM.
+3. Mengatur konfigurasi resource VM (CPU, RAM, storage).
+4. Menjelaskan mekanisme proteksi OS melalui virtualisasi.
+5. Menyusun laporan praktikum instalasi dan konfigurasi VM secara sistematis.
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 
 ---
 
@@ -34,6 +51,7 @@ Konfigurasi sumber daya yang tepat sangat krusial untuk menjaga keseimbangan kin
 ---
 
 ## Langkah Praktikum
+<<<<<<< HEAD
 1. **Instalasi Virtual Machine**
    - Instal VirtualBox atau VMware pada komputer host.  
    - Pastikan fitur virtualisasi (VT-x / AMD-V) aktif di BIOS.
@@ -63,6 +81,31 @@ Konfigurasi sumber daya yang tepat sangat krusial untuk menjaga keseimbangan kin
 
 7. **Commit & Push**
    ```bash
+=======
+1. Instalasi Virtual Machine
+Instal VirtualBox atau VMware pada komputer host.
+Pastikan fitur virtualisasi (VT-x / AMD-V) aktif di BIOS.
+2. Pembuatan OS Guest
+   - Buat VM baru dan pilih OS guest (misal: Ubuntu Linux).
+      - Atur resource awal:
+      - CPU: 1–2 core
+      - RAM: 2–4 GB
+      - Storage: ≥ 20 GB
+3. Instalasi Sistem Operasi
+   - Jalankan proses instalasi OS guest sampai selesai.
+   - Pastikan OS guest dapat login dan berjalan normal.
+4. Konfigurasi Resource
+   - Ubah konfigurasi CPU dan RAM.
+   - Amati perbedaan performa sebelum dan sesudah perubahan resource.
+5. Analisis Proteksi OS
+   - Jelaskan bagaimana VM menyediakan isolasi antara host dan guest.
+   - Kaitkan dengan konsep sandboxing dan hardening OS.
+6. Dokumentasi
+   - Ambil screenshot setiap tahap penting.
+   - Simpan di folder screenshots/.
+7. Commit & Push
+   ```
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
    git add .
    git commit -m "Minggu 12 - Virtual Machine"
    git push origin main
@@ -71,7 +114,11 @@ Konfigurasi sumber daya yang tepat sangat krusial untuk menjaga keseimbangan kin
 ---
 
 ## Kode / Perintah
+<<<<<<< HEAD
 ```
+=======
+```bash
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 praktikum/week12-virtual-machine/
 ├─ code/
 │  └─ catatan_konfigurasi.txt (opsional)
@@ -85,6 +132,7 @@ praktikum/week12-virtual-machine/
 ---
 
 ## Hasil Eksekusi
+<<<<<<< HEAD
 1. Persiapan instalasi proses menginstal oracle virtual box untuk persiapan dalam pembuatan virtual/machine.
 ![Screenshot](screenshots/instalasi_VM.png)
 2. Konfigurasi dan instalasi VM proses pembuatan mesin virtual menggunakan fitur unattended install di virtual box untuk otomatisasi instalasi Ubuntu.
@@ -98,6 +146,24 @@ praktikum/week12-virtual-machine/
 5. Saat menggunakan RAM 3GB,membuka 5 tab berjalan lancar meski RAM terpakai 90%.Namun saat RAM diturunkan menjadi 2 GB diturunkan menjadi 2GB,sistem menjadi sangat lambat (lag)dan Firefox sering not responding karena kehabisan memori.
 ![Screenshot](screenshots/FIREFOX.jpeg)
 6. 
+=======
+
+1. Persiapan instalasi proses menginstal oracle virtual box untuk persiapan dalam pembuatan virtual/machine
+![Screenshot hasil](./screenshots/instalasi_VM.png.png)
+2. Konfigurasi dan instalasi VM proses pembuatan mesin virtual menggunakan fitur unattended install di virtual box untuk otomatisasi instalasi Ubuntu.
+![Screenshot hasil](./screenshots/konfigurasi_resource.png.jpeg)
+3. Eksperimen VM linux ubuntu 24.pengecekan menggunakan perintah uname-a (cek kernel) & free -h (cek ram).Terlihat total RAm 2.8Gi (3GB).Pengujian beban kerja dengan membuka tab Firefox (Youtube dan E-learning).
+ -  Hasil : Ram terpakai mencapai 90.5% (3.1 GB).
+ - Kondisi : Sistem berjalan responsif dan lancar meskipun pengguna memori hampir habis.
+ ![Screenshot hasil](./screenshots/os_guest_running.png.png)
+ 
+4. Setelah proses mengurangi Resource,kemudian membuka lagi VM dan membuka system manager,terlihat belum menjalankan aplikasi lain sudah memakai RAM 2,1 GB (97,7%).
+![Screenshot hasil](./screenshots/RAM_2.jpeg)
+
+5. Saat menggunakan RAM 3GB,membuka 5 tab berjalan lancar meski RAM terpakai 90%.Namun saat RAM diturunkan menjadi 2 GB diturunkan menjadi 2GB,sistem menjadi sangat lambat (lag)dan Firefox sering not responding karena kehabisan memori.
+![Screenshot hasil](./screenshots/FIREFOX.PNG.jpeg)
+
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 ---
 
 ## Analisis
@@ -115,21 +181,37 @@ praktikum/week12-virtual-machine/
 
 ## Quiz
 1. [Apa perbedaan antara host OS dan guest OS?]  
+<<<<<<< HEAD
    **Jawaban:**  Instalasi dan Kontrol Host OS adalah sistem utama yang terpasang langsung pada perangkat keras fisik dan memegang kendali penuh atas mesin. Sementara Guest OS adalah sistem virtual yang berjalan di dalam Host OS melalui perantara hypervisor.Pengelolaan Sumber Daya: Host OS bertindak sebagai penyedia dan pengelola sumber daya (CPU, RAM, storage). Guest OS hanya menggunakan jatah sumber daya virtual yang dialokasikan kepadanya dan tidak bisa mengakses perangkat keras secara langsung.Isolasi dan Keamanan: Host OS mengelola stabilitas seluruh sistem. Guest OS bersifat terisolasi; jika sistem tamu ini mengalami gangguan atau terkena virus, dampaknya tidak akan menyebar atau merusak sistem fisik utama (Host OS).
 2. [Apa peran hypervisor dalam virtualisasi?  ]  
    **Jawaban:**  Hypervisor berperan sebagai pengelola utama yang menjembatani perangkat keras fisik dengan berbagai sistem operasi virtual. Tugas intinya adalah membagi dan mendistribusikan sumber daya seperti CPU, RAM, dan penyimpanan dari Host OS kepada beberapa Guest OS agar dapat berjalan secara bersamaan secara efisien.
    Selain mengelola sumber daya, hypervisor berfungsi sebagai penjamin keamanan melalui mekanisme isolasi. Ia memastikan setiap mesin virtual berjalan di lingkungannya masing-masing, sehingga jika terjadi crash atau infeksi malware pada satu sistem tamu, hal tersebut tidak akan memengaruhi stabilitas sistem utama maupun mesin virtual lainnya.
 3. [Mengapa virtualisasi meningkatkan keamanan sistem?]  
    **Jawaban:**  Virtualisasi meningkatkan keamanan melalui isolasi sistem, di mana setiap mesin virtual (VM) bekerja dalam lingkungan tertutup. Jika satu sistem terkena virus atau malware, ancaman tersebut akan terkurung di dalam VM dan tidak dapat menyebar ke sistem utama (Host OS) maupun perangkat keras fisik.
+=======
+   **Jawaban** : Instalasi dan Kontrol Host OS adalah sistem utama yang terpasang langsung pada perangkat keras fisik dan memegang kendali penuh atas mesin. Sementara Guest OS adalah sistem virtual yang berjalan di dalam Host OS melalui perantara hypervisor.Pengelolaan Sumber Daya: Host OS bertindak sebagai penyedia dan pengelola sumber daya (CPU, RAM, storage). Guest OS hanya menggunakan jatah sumber daya virtual yang dialokasikan kepadanya dan tidak bisa mengakses perangkat keras secara langsung.Isolasi dan Keamanan: Host OS mengelola stabilitas seluruh sistem. Guest OS bersifat terisolasi; jika sistem tamu ini mengalami gangguan atau terkena virus, dampaknya tidak akan menyebar atau merusak sistem fisik utama (Host OS).
+2. [Apa peran hypervisor dalam virtualisasi?]  
+   **Jawaban**  :  Hypervisor berperan sebagai pengelola utama yang menjembatani perangkat keras fisik dengan berbagai sistem operasi virtual. Tugas intinya adalah membagi dan mendistribusikan sumber daya seperti CPU, RAM, dan penyimpanan dari Host OS kepada beberapa Guest OS agar dapat berjalan secara bersamaan secara efisien.
+   Selain mengelola sumber daya, hypervisor berfungsi sebagai penjamin keamanan melalui mekanisme isolasi. Ia memastikan setiap mesin virtual berjalan di lingkungannya masing-masing, sehingga jika terjadi crash atau infeksi malware pada satu sistem tamu, hal tersebut tidak akan memengaruhi stabilitas sistem utama maupun mesin virtual lainnya.
+3. [Mengapa virtualisasi meningkatkan keamanan sistem?]  
+   **Jawaban**  : Virtualisasi meningkatkan keamanan melalui isolasi sistem, di mana setiap mesin virtual (VM) bekerja dalam lingkungan tertutup. Jika satu sistem terkena virus atau malware, ancaman tersebut akan terkurung di dalam VM dan tidak dapat menyebar ke sistem utama (Host OS) maupun perangkat keras fisik.
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
    Selain itu, fitur snapshot memungkinkan pemulihan instan ke kondisi aman jika terjadi kegagalan. Dengan metode ini, pengujian aplikasi berbahaya dapat dilakukan tanpa risiko, karena sistem fisik tetap terlindungi di balik lapisan virtualisasi yang bertindak sebagai benteng pertahanan.
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
+<<<<<<< HEAD
 - Apa bagian yang paling menantang minggu ini? Pusing 7 keliling
 - Bagaimana cara Anda mengatasinya?  Paramaex obatnya
 
+=======
+- Apa bagian yang paling menantang minggu ini?  
+Pusing 7 keliling
+- Bagaimana cara Anda mengatasinya?  
+Paramex Obatnya
+>>>>>>> fbd8316ebf0b48cd8652bea179300f780e5f8a29
 ---
 
 **Credit:**  
